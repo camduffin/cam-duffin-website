@@ -10,6 +10,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 body {
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: 62.5%;
+    position: relative;
+    z-index: -1;
 }
 
 .wrapper {

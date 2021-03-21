@@ -9,25 +9,43 @@
 </head>
 <body>
     <header id="header">
-        <div class="header-text wrapper">
-            <h1>Cam Duffin</h1>
-            <h2>Web Developer</h2>
-        </div>
-        <div class="header-icons">
-
-        </div>
+            <div class="header-text wrapper">
+                <h1>Cam Duffin</h1>
+                <h2>Web Developer</h2>
+            </div>
+            <div class="wave">
+                <img src="./assets/wave.jpg" alt="small blue wave drawing.">
+            </div>
+            <div class="squiggly">
+                <img src="./assets/squiggly.jpg" alt="a small green arrow.">
+            </div>
+            <div class="down-arrow">
+                <i class="fas fa-long-arrow-alt-down"></i>
+            </div>
+    </header>
+    <aside>
         <nav>
             <ul>
-                <li>Intro</li>
-                <li>About me</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li>
+                    <a href="#header">Intro</a>
+                </li>
+                <li>
+                    <a href="#about-me">About Me</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <section class="bio" id="bio">
+    </aside>
+        <main>
+        <section class="about-me" id="about-me">
             <div class="inner-wrapper">
                 <div class="photo">
                     <img src="./assets/headshot.jpg" alt="Photo of Cameron Duffin">
@@ -43,6 +61,7 @@
             <div class="inner-wrapper">
                 <div class="skills-header">
                     <h3>Skills</h3>
+                    <h4>Web Development</h4>
                 </div>
                 <ul>
                     <li>
@@ -55,36 +74,126 @@
                     </li>
                     <li>
                         <i class="fab fa-js-square"></i>
-                        <p>JavaScript + ES6</p>
+                        <p>JavaScript ES6</p>
                     </li>
                     <li>
                         <i class="fab fa-sass"></i>
                         <p>SASS</p>
                     </li>
                     <li>
-                        <img src="../assets/firebase.png">
-                        Firebase
+                        <img class="firebase" src="../assets/firebase.png">
+                        <p>Firebase</p>
                     </li>
                     <li>
                         <i class="fab fa-react"></i>
-                        REACT
+                        <p>REACT</p>
                     </li>
                     <li>
                         <i class="fab fa-github"></i>
-                        Git + Github
+                        <p>Git + Github</p>
+                    </li>
+                </ul>
+                <div>
+                    <h4>Non-technical + Music</h4>
+                </div>
+                <ul>
+                    <li>
+                        <p>Artist Management</p>
+                    </li>
+                    <li>
+                        <p>Collaboration</p>
+                    </li>
+                    <li>
+                        <p>Logic Pro X</p>
+                    </li>
+                    <li>
+                        <p>Vocals, Drums, Piano, Guitar, Synthesizers</p>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="projects" id="projects">
             <div class="inner-wrapper">
-
+                <h3>Projects</h3>
+                <ul>
+                    <li class="popsipoll">
+                        <div class="popsipoll-image-container">
+                            <img src="./assets/macbook.png">
+                            <img class="popsipoll-overlay" src="" alt="">
+                        </div>
+                        <h4>Popsipoll</h4>
+                        <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
+                        <ul class="popsipoll-icons">
+                            <li>
+                                <i class="fab fa-sass"></i>
+                                <p>SASS</p>
+                            </li>
+                            <li>
+                                <i class="fab fa-react"></i>
+                                <p>REACT</p>
+                            </li>
+                            <li>
+                                <img class="firebase" src="../assets/firebase.png">
+                                <p>Firebase</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dejabrew">
+                        <div class="dejabrew-image-container">
+                            <img src="./assets/macbook.png">
+                            <img class="dejabrew-overlay" src="" alt="">
+                        </div>
+                        <h4>Popsipoll</h4>
+                        <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
+                        <ul class="dejabrew-icons">
+                            <li>
+                                <i class="fab fa-sass"></i>
+                                <p>SASS</p>
+                            </li>
+                            <li>
+                                <i class="fab fa-react"></i>
+                                <p>REACT</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="adjacent">
+                        <div class="adjacent-image-container">
+                            <img src="./assets/macbook.png">
+                            <img class="adjacent-overlay" src="" alt="">
+                        </div>
+                        <h4>Popsipoll</h4>
+                        <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
+                        <ul class="adjacent-icons">
+                            <li>
+                                <i class="fab fa-sass"></i>
+                                <p>SASS</p>
+                            </li>
+                            <li>
+                                <i class="fab fa-js-square"></i>
+                                <p>JavaScript ES6</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-globe"></i>
+                                <p>Multiple RESTful API's</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
-    <footer id="footer">
+    <footer id="contact">
+            <h3>Contact</h3>
         <form action="">
+            <label for="name"></label>
+            <input type="text" id="name">
+
+            <label for="email"></label>
+            <input type="email" id="email">
+
+            <textarea name="" id="" cols="30" rows="10"></textarea>
         </form>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

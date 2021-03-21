@@ -2,12 +2,50 @@
 .inner-wrapper {
     margin: 0 auto;
     max-width: 1000px;
-    width: 65%;
+    width: 60%;
 }
 
+aside {
+    position: absolute;
+    right: 12%;
+    top: 8%;
+    z-index: 100;
+    margin-right: 5%;
+}
+
+nav {
+    @include nav(1.5rem);
+    width: 200px;
+    border-top: 2px solid $pink;
+    border-left: 2px solid $pink;
+    position: fixed;
+    padding: 14px;
+    opacity: .7;
+
+
+    li {
+        transition: all ease-in-out .2s;
+
+        a {
+            @include nav(1.3rem);
+            text-decoration: none;
+        }
+    }
+
+
+    li:hover, li:focus {
+        transform: scale(1.08);
+        cursor: pointer;
+    }
+
+}
+
+
+
 // About Me Section
-.bio {
+.about-me {
     height: 100vh;
+    margin-top: 100px;
     @include heading(2rem);
 
     .bio-text {
@@ -29,12 +67,26 @@
     background-color: $lightgrey;
     height: 100vh;
     clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
-    text-align: center;
-
-
+    z-index: -200;
+    margin: 0 auto;
+    height: 115vh;
+    
     .skills-header {
+
         @include heading(3rem);
         padding-top: 100px;
+    }
+
+    h4 {
+        @include subHeading(1.5rem);
+        color: $grey;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        margin-right: 100px;
     }
 
     img {
@@ -42,9 +94,49 @@
         color: $purple;
     }
 
-    .fab {
+    .fab, .fas {
         color: $purple;
+        font-size: 3rem;
+        padding-top: 26px;
+    }
+
+    p {
+        @include paragraph(1rem);
+        width: 40px;
     }
 }
 
 // Projects Section
+
+.projects {
+
+    h3 {
+        @include heading(3rem);
+        padding-top: 100px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 40%;
+        }
+
+        .firebase {
+            width: 5%;
+            opacity: .7;
+        }
+
+        .fab, .fas {
+            color: $purple;
+            font-size: 3rem;
+            padding-top: 26px;
+        }
+
+        p {
+            width: 70%;
+        }
+
+    }
+}

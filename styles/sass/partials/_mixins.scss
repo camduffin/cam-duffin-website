@@ -18,3 +18,10 @@
     font-family: 'Helvetica Nue', sans-serif;
     font-weight: 400;
 }
+
+@mixin nav($sizeValue) {
+    font-size: $sizeValue;
+    color: $pink;
+    font-family: 'Helvetica Nue', sans-serif;
+    font-weight: 400;
+}
