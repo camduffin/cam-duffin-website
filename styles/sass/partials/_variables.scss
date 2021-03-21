@@ -1,0 +1,22 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+@mixin heading($sizeValue) {
+    font-size: $sizeValue;
+    font-family: 'Helvetica Nue', sans-serif;
+    font-weight: 700;
+}
+
+@mixin subHeading($sizeValue) {
+    font-size: $sizeValue;
+    font-family: 'Helvetica Nue', sans-serif;
+    font-weight: 400;
+}
+
+@mixin paragraph($sizeValue) {
+    font-size: $sizeValue;
+    color: $grey;
+    font-family: 'Helvetica Nue', sans-serif;
+    font-weight: 400;
+}
