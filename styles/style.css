@@ -203,15 +203,6 @@ template {
   display: none;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -236,6 +227,23 @@ html {
   overflow: hidden;
 }
 
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 80%;
+}
+
+ul {
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
 header {
   background-color: #433A8B;
   background-size: cover;
@@ -258,6 +266,7 @@ header {
   width: 0 auto;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  z-index: 1;
 }
 
 header .header-text {
@@ -271,15 +280,74 @@ header .header-text h1 {
   font-weight: 700;
   color: #ffff;
   margin-bottom: 0;
+  opacity: .9;
 }
 
 header .header-text h2 {
+  font-size: 1.3rem;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 700;
   color: #F65E8D;
-  font-size: 1rem;
   margin-left: 10px;
+  opacity: .9;
 }
 
-body {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 62.5%;
+footer {
+  background-color: #433A8B;
+  background-size: cover;
+  height: 80vh;
+  -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 100%);
+          clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 100%);
+}
+
+.inner-wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 65%;
+}
+
+.bio {
+  height: 100vh;
+  font-size: 2rem;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 700;
+}
+
+.bio .bio-text {
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+}
+
+.bio .photo {
+  padding-top: 60px;
+}
+
+.bio .photo img {
+  width: 30%;
+}
+
+.skills {
+  background-color: #EBEBEB;
+  height: 100vh;
+  -webkit-clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
+          clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
+  text-align: center;
+}
+
+.skills .skills-header {
+  font-size: 3rem;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 700;
+  padding-top: 100px;
+}
+
+.skills img {
+  width: 40px;
+  color: #433A8B;
+}
+
+.skills .fab {
+  color: #433A8B;
 }

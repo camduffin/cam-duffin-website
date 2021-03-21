@@ -11,6 +11,7 @@ header {
     text-align: left;
     width: 0 auto;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    z-index: 1;
 
     .header-text {
         margin-left: 200px;
@@ -20,13 +21,23 @@ header {
             @include heading(5rem);
             color: $white;
             margin-bottom: 0;
+            opacity: .9;
         }
     
         h2 {
+            @include subHeading(1.3rem);
             color: $pink;
-            font-size: 1rem;
             margin-left: 10px;
+            opacity: .9;
         }
     }
 
+
+}
+
+footer {
+    background-color: $purple;
+    background-size: cover;
+    height: 80vh;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 100%);
 }

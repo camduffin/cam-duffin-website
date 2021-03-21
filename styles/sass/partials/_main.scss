@@ -1,0 +1,50 @@
+// Wrapper inside every main section
+.inner-wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 65%;
+}
+
+// About Me Section
+.bio {
+    height: 100vh;
+    @include heading(2rem);
+
+    .bio-text {
+        @include paragraph(1rem);
+    }
+
+    .photo {
+        padding-top: 60px;
+        img {
+            width: 30%;
+        }
+    }
+
+}
+
+// Skills Section
+
+.skills {
+    background-color: $lightgrey;
+    height: 100vh;
+    clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
+    text-align: center;
+
+
+    .skills-header {
+        @include heading(3rem);
+        padding-top: 100px;
+    }
+
+    img {
+        width: 40px;
+        color: $purple;
+    }
+
+    .fab {
+        color: $purple;
+    }
+}
+
+// Projects Section
