@@ -5,10 +5,12 @@
     width: 60%;
 }
 
+// STICKY NAV
+
 aside {
     position: absolute;
     right: 12%;
-    top: 8%;
+    top: 6%;
     z-index: 100;
     margin-right: 5%;
 
@@ -37,13 +39,13 @@ aside {
     }
 }
 
+// ABOUT ME
 
-
-
-// About Me Section
 .about-me {
     height: 100vh;
     margin-top: 100px;
+    display: flex;
+    align-items: center;
     @include heading(2rem);
 
     .about-me-flex {
@@ -71,23 +73,16 @@ aside {
 
     button {
         border: none;
-        background-color: $lightgrey;
-        border: 2px solid $grey;
-        opacity: .7;
-        border-radius: 4px;
+        background-color: $purple;
         font-size: 1.2rem;
         padding: 10px;
         margin-left: 70px;
-        opacity: .7;
-    }
-
-    button:hover, button:focus {
-        
+        color: $white;
     }
 
 }
 
-// Skills Section
+// SKILLS
 
 .skills {
     background-color: $lightgrey;
@@ -112,11 +107,7 @@ aside {
         justify-content: space-between;
         text-align: left;
         margin-right: 100px;
-    }
-
-    img {
-        width: 40px;
-        color: $purple;
+        flex-wrap: wrap;
     }
 
     .fab, .fas {
@@ -127,11 +118,11 @@ aside {
 
     p {
         @include paragraph(1rem);
-        width: 40px;
+        width: 80%;
     }
 }
 
-// Projects Section
+// PROJECTS
 
 .projects {
 
@@ -139,17 +130,14 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-
+    
     h3 {
         @include heading(3rem);
         padding-top: 100px;
     }
-
-    .popsipoll {
-        display: flex;
-        justify-content: space-between;
-        @include paragraph(1rem);
-        text-align: left;
+    
+    h4 {
+        @include subHeading(2rem);
     }
 
     ul {
@@ -157,66 +145,136 @@ aside {
         flex-direction: column;
         justify-content: space-around;
         text-align: left;
+    }
+
+
+// POPSIPOLL PROJECT
+
+    .popsipoll {
+        display: flex;
+        justify-content: space-between;
+        @include paragraph(1rem);
+        margin: 100px 0;
 
         .popsipoll-image-container {
             width: 100%;
             img {
-                width: 100%;
-                position: relative;
-                right: 50px;
+                width: 120%;
             }
         }
 
-        .firebase {
-            width: 5%;
-            opacity: .7;
+        .popsipoll-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: 80px;
+            justify-content: center;
         }
 
+        .popsipoll-icons {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+        }
+    
         .fab, .fas {
             color: $purple;
             font-size: 3rem;
             padding-top: 26px;
         }
-
+    
         p {
+            width: 80%;
             margin-left: 0;
         }
-
     }
+
+// DEJA BREW PROJECT
 
     .dejabrew {
         display: flex;
         justify-content: space-between;
         @include paragraph(1rem);
-        text-align: left;
-    }
+        margin: 100px 0;
 
-
-    .dejabrew-image-container {
-        width: 100%;
-        img {
+        .dejabrew-image-container {
             width: 100%;
-            position: relative;
-            right: 50px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .dejabrew-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .dejabrew-icons {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: left;
+        }
+    
+        .fab, .fas {
+            color: $purple;
+            font-size: 3rem;
+            padding-top: 26px;
+        }
+    
+        p {
+            margin-right: 0;
+            width: 80%;
         }
     }
 
+
+// ADJACENT PROJECT
 
     .adjacent {
         display: flex;
         justify-content: space-between;
         @include paragraph(1rem);
-        text-align: left;
-    }
-
-
-    .adjacent-image-container {
-        width: 100%;
-        img {
+        margin: 100px 0;
+    
+        .adjacent-image-container {
             width: 100%;
-            position: relative;
-            right: 50px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .adjacent-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: 80px;
+        }
+
+        .adjacent-icons {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: left;
+        }
+    
+        .fab, .fas {
+            color: $purple;
+            font-size: 3rem;
+            padding-top: 26px;
+        }
+    
+        p {
+            margin-right: 0;
+            width: 80%;
         }
     }
 
+
 }
+
+
+
+
+

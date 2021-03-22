@@ -10,18 +10,14 @@
 </head>
 <body>
     <header id="header">
-            <div class="header-text wrapper" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+            <div class="header-text wrapper" data-aos="fade-right" data-aos-duration="2000">
                 <h1>Cam Duffin</h1>
                 <h2>Web Developer</h2>
             </div>
-            <div class="wave">
-                <img src="./assets/wave.jpg" alt="small blue wave drawing.">
-            </div>
-            <div class="squiggly">
-                <img src="./assets/squiggly.jpg" alt="a small green arrow.">
-            </div>
             <div class="down-arrow">
-                <i class="fas fa-long-arrow-alt-down"></i>
+                <a href="#about-me">
+                    <i class="fas fa-long-arrow-alt-down"></i>
+                </a>
             </div>
     </header>
     <aside>
@@ -85,7 +81,7 @@
                         <p>SASS</p>
                     </li>
                     <li>
-                        <img class="firebase" src="../assets/firebase.png">
+                        <i class="fas fa-fire"></i>
                         <p>Firebase</p>
                     </li>
                     <li>
@@ -124,13 +120,17 @@
             <div class="inner-wrapper">
                 <h3>Projects</h3>
                 <ul>
-                    <li class="popsipoll">
+                    <li class="popsipoll" data-aos="fade-right" data-aos-duration="1000">
                         <div class="popsipoll-image-container">
                             <img src="./assets/macbook.png">
                             <img class="popsipoll-overlay" src="" alt="">
                         </div>
                         <div class="popsipoll-text">
                             <h4>Popsipoll</h4>
+                            <div>
+                                <a href="https://popsipoll.netlify.app/" target="_blank" rel="noreferrer noopener">Live</a>
+                                <a href="https://github.com/Cam-Fernanda-Melissa-Jake-Project4/popsipoll" target="_blank" rel="noreferrer noopener">Github</a>
+                            </div>
                             <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
                             <ul class="popsipoll-icons">
                                 <li>
@@ -142,51 +142,63 @@
                                     <p>REACT</p>
                                 </li>
                                 <li>
-                                    <img class="firebase" src="../assets/firebase.png">
+                                    <i class="fas fa-fire"></i>
                                     <p>Firebase</p>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li class="dejabrew">
+                    <li class="dejabrew" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="dejabrew-text">
+                            <h4>Deja Brew</h4>
+                            <div>
+                                <a href="https://deja-brew.netlify.app/" target="_blank" rel="noreferrer noopener">Live</a>
+                                <a href="https://github.com/camduffin/project-3-deja-brew" target="_blank" rel="noreferrer noopener">Github</a>
+                            </div>
+                            <p>A brewery finder app that allows users to search for breweries in the U.S. by keyword, city or state. Get google map directions to any brewery from your location!</p>
+                            <ul class="dejabrew-icons">
+                                <li>
+                                    <i class="fab fa-sass"></i>
+                                    <p>SASS</p>
+                                </li>
+                                <li>
+                                    <i class="fab fa-react"></i>
+                                    <p>REACT</p>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="dejabrew-image-container">
                             <img src="./assets/macbook.png">
                             <img class="dejabrew-overlay" src="" alt="">
                         </div>
-                        <h4>Popsipoll</h4>
-                        <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
-                        <ul class="dejabrew-icons">
-                            <li>
-                                <i class="fab fa-sass"></i>
-                                <p>SASS</p>
-                            </li>
-                            <li>
-                                <i class="fab fa-react"></i>
-                                <p>REACT</p>
-                            </li>
-                        </ul>
                     </li>
-                    <li class="adjacent">
+                    <li class="adjacent" data-aos="fade-right" data-aos-duration="1000">
                         <div class="adjacent-image-container">
                             <img src="./assets/macbook.png">
                             <img class="adjacent-overlay" src="" alt="">
                         </div>
-                        <h4>Popsipoll</h4>
-                        <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
-                        <ul class="adjacent-icons">
-                            <li>
-                                <i class="fab fa-sass"></i>
-                                <p>SASS</p>
-                            </li>
-                            <li>
-                                <i class="fab fa-js-square"></i>
-                                <p>JavaScript ES6</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-code"></i>
-                                <p>Multiple RESTful API's</p>
-                            </li>
-                        </ul>
+                        <div class="adjacent-text">
+                            <h4>Adjacent</h4>
+                            <div>
+                                <a href="https://steph-cam.github.io/adjacent-app/" target="_blank" rel="noreferrer noopener">Live</a>
+                                <a href="https://github.com/Steph-Cam/adjacent-app" target="_blank" rel="noreferrer noopener">Github</a>
+                            </div>
+                            <p>A music suggestion app that uses two separate API's. Users can type in one of their favourite artists to get suggested similar artist results.</p>
+                            <ul class="adjacent-icons">
+                                <li>
+                                    <i class="fab fa-sass"></i>
+                                    <p>SASS</p>
+                                </li>
+                                <li>
+                                    <i class="fab fa-js-square"></i>
+                                    <p>JavaScript ES6</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-code"></i>
+                                    <p>Multiple RESTful API's</p>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -207,11 +219,12 @@
             <textarea name="message" id="message" placeholder="Your message"></textarea>
             <button>Send Message</button>
         </form>
-        <div class="in-touch" data-aos="fade-left" data-aos-duration="1000">
-            <h4>Get in touch!</h4>
-            <p>Don't hesitate to reach out via email or social media. I'd love to chat about work opportunities, the Vancouver Canucks or crazy guitar pedals....</p>
-
-            <nav class="contact-nav">
+        <div class="in-touch">
+            <div class="in-touch-text" data-aos="fade-left" data-aos-duration="1000">
+                <h4>Get in touch!</h4>
+                <p>Don't hesitate to reach out via email or social media. I'd love to chat about work opportunities, the Vancouver Canucks or crazy guitar pedals....</p>
+            </div>
+            <nav class="contact-nav" data-aos="fade-right" data-aos-duration="1000">
                 <ul>
                     <li>
                         <a href="https://twitter.com/cam_duffin" target="_blank" rel="noreferrer noopener">
@@ -236,11 +249,18 @@
                 </ul>
             </nav>
         </div>
+        <div>
+            <a href="#header">Back to top</a>
+            <i class="fas fa-long-arrow-alt-up"></i>
+        </div>
     </section>
-    </div>
+
+
+
     <footer class="bottom-bar">
         <p>Made by Cam Duffin 2021</p>
     </footer>
+
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
