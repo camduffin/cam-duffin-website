@@ -11,34 +11,32 @@ aside {
     top: 8%;
     z-index: 100;
     margin-right: 5%;
-}
 
-nav {
-    @include nav(1.5rem);
-    width: 200px;
-    border-top: 2px solid $pink;
-    border-left: 2px solid $pink;
-    position: fixed;
-    padding: 14px;
-    opacity: .7;
-
-
-    li {
-        transition: all ease-in-out .2s;
-
-        a {
-            @include nav(1.3rem);
-            text-decoration: none;
+    nav {
+        @include nav(1.5rem);
+        width: 200px;
+        border-top: 2px solid $pink;
+        border-left: 2px solid $pink;
+        position: fixed;
+        padding: 14px;
+        opacity: .7;
+    
+        li {
+            transition: all ease-in-out .2s;
+    
+            a {
+                @include nav(1.3rem);
+                text-decoration: none;
+            }
+        }
+    
+        li:hover, li:focus {
+            transform: scale(1.08);
+            cursor: pointer;
         }
     }
-
-
-    li:hover, li:focus {
-        transform: scale(1.08);
-        cursor: pointer;
-    }
-
 }
+
 
 
 
@@ -48,15 +46,43 @@ nav {
     margin-top: 100px;
     @include heading(2rem);
 
+    .about-me-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-me-text {
+        margin: 40px;
+    }
+
     .bio-text {
         @include paragraph(1rem);
     }
 
     .photo {
         padding-top: 60px;
+        max-width: 35%;
+        margin: 0;
         img {
-            width: 30%;
+            width: 100%;
         }
+    }
+
+    button {
+        border: none;
+        background-color: $lightgrey;
+        border: 2px solid $grey;
+        opacity: .7;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-left: 70px;
+        opacity: .7;
+    }
+
+    button:hover, button:focus {
+        
     }
 
 }
@@ -65,11 +91,10 @@ nav {
 
 .skills {
     background-color: $lightgrey;
-    height: 100vh;
     clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
     z-index: -200;
     margin: 0 auto;
-    height: 115vh;
+    height: 100vh;
     
     .skills-header {
 
@@ -110,17 +135,36 @@ nav {
 
 .projects {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
     h3 {
         @include heading(3rem);
         padding-top: 100px;
     }
 
+    .popsipoll {
+        display: flex;
+        justify-content: space-between;
+        @include paragraph(1rem);
+        text-align: left;
+    }
+
     ul {
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
+        text-align: left;
 
-        img {
-            width: 40%;
+        .popsipoll-image-container {
+            width: 100%;
+            img {
+                width: 100%;
+                position: relative;
+                right: 50px;
+            }
         }
 
         .firebase {
@@ -135,8 +179,44 @@ nav {
         }
 
         p {
-            width: 70%;
+            margin-left: 0;
         }
 
     }
+
+    .dejabrew {
+        display: flex;
+        justify-content: space-between;
+        @include paragraph(1rem);
+        text-align: left;
+    }
+
+
+    .dejabrew-image-container {
+        width: 100%;
+        img {
+            width: 100%;
+            position: relative;
+            right: 50px;
+        }
+    }
+
+
+    .adjacent {
+        display: flex;
+        justify-content: space-between;
+        @include paragraph(1rem);
+        text-align: left;
+    }
+
+
+    .adjacent-image-container {
+        width: 100%;
+        img {
+            width: 100%;
+            position: relative;
+            right: 50px;
+        }
+    }
+
 }

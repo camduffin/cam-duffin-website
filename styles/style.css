@@ -329,7 +329,7 @@ header .squiggly img {
 
 header .header-text {
   margin-left: 200px;
-  margin-top: -100px;
+  margin-top: -230px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,21 +362,161 @@ header .header-text h2 {
   opacity: .8;
 }
 
-footer {
-  background-color: #433A8B;
+.contact {
+  background-color: #EBEBEB;
   background-size: cover;
-  height: 100vh;
-  -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 100%);
-          clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0 100%);
+          clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0 100%);
 }
 
-footer h3 {
+.contact h3 {
   font-size: 3rem;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 700;
-  color: #ffff;
+  color: #000000;
   padding-top: 150px;
-  margin-left: 200px;
+  margin-bottom: 80px;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200px;
+  width: 700px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+}
+
+.contact form div {
+  margin-bottom: 50px;
+}
+
+.contact form div input[type="text"], .contact form div input[type="email"] {
+  width: 245px;
+  background-color: transparent;
+  border: none;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  padding: 7px;
+  color: #000000;
+}
+
+.contact form div input[type="text"]::-webkit-input-placeholder, .contact form div input[type="email"]::-webkit-input-placeholder, .contact form div textarea::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.contact form div input[type="text"]:-ms-input-placeholder, .contact form div input[type="email"]:-ms-input-placeholder, .contact form div textarea:-ms-input-placeholder {
+  color: #000000;
+}
+
+.contact form div input[type="text"]::-ms-input-placeholder, .contact form div input[type="email"]::-ms-input-placeholder, .contact form div textarea::-ms-input-placeholder {
+  color: #000000;
+}
+
+.contact form div input[type="text"]::placeholder, .contact form div input[type="email"]::placeholder, .contact form div textarea::placeholder {
+  color: #000000;
+}
+
+.contact form textarea {
+  resize: none;
+  background-color: transparent;
+  border: none;
+  width: 500px;
+  min-height: 200px;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  color: #000000;
+  padding: 7px;
+}
+
+.contact form button {
+  width: 100px;
+  margin-top: 50px;
+  background: transparent;
+  color: #000000;
+  border: none;
+  text-align: left;
+  border: 2px solid #F65E8D;
+  opacity: .6;
+  padding: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.contact form button:hover, .contact form button:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+.contact .in-touch {
+  padding-top: 300px;
+  padding-bottom: 150px;
+}
+
+.contact .in-touch h4 {
+  font-size: 2rem;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 700;
+  color: #000000;
+}
+
+.contact .in-touch p {
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+.contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+  text-align: left;
+}
+
+.contact ul .fab {
+  color: #F65E8D;
+  font-size: 2.5rem;
+  opacity: .8;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.contact ul .fab:hover, .contact ul .fab:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background-color: #000000;
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  color: #ffff;
+  margin: 0;
+  padding: 0;
 }
 
 .inner-wrapper {
@@ -393,7 +533,7 @@ aside {
   margin-right: 5%;
 }
 
-nav {
+aside nav {
   font-size: 1.5rem;
   color: #F65E8D;
   font-family: 'Helvetica Nue', sans-serif;
@@ -406,12 +546,12 @@ nav {
   opacity: .7;
 }
 
-nav li {
+aside nav li {
   -webkit-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s;
 }
 
-nav li a {
+aside nav li a {
   font-size: 1.3rem;
   color: #F65E8D;
   font-family: 'Helvetica Nue', sans-serif;
@@ -419,7 +559,7 @@ nav li a {
   text-decoration: none;
 }
 
-nav li:hover, nav li:focus {
+aside nav li:hover, aside nav li:focus {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
   cursor: pointer;
@@ -433,6 +573,22 @@ nav li:hover, nav li:focus {
   font-weight: 700;
 }
 
+.about-me .about-me-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-me .about-me-text {
+  margin: 40px;
+}
+
 .about-me .bio-text {
   font-size: 1rem;
   color: #686464;
@@ -442,20 +598,33 @@ nav li:hover, nav li:focus {
 
 .about-me .photo {
   padding-top: 60px;
+  max-width: 35%;
+  margin: 0;
 }
 
 .about-me .photo img {
-  width: 30%;
+  width: 100%;
+}
+
+.about-me button {
+  border: none;
+  background-color: #EBEBEB;
+  border: 2px solid #686464;
+  opacity: .7;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-left: 70px;
+  opacity: .7;
 }
 
 .skills {
   background-color: #EBEBEB;
-  height: 100vh;
   -webkit-clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
           clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
   z-index: -200;
   margin: 0 auto;
-  height: 115vh;
+  height: 100vh;
 }
 
 .skills .skills-header {
@@ -502,11 +671,39 @@ nav li:hover, nav li:focus {
   width: 40px;
 }
 
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
 .projects h3 {
   font-size: 3rem;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 700;
   padding-top: 100px;
+}
+
+.projects .popsipoll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  text-align: left;
 }
 
 .projects ul {
@@ -517,10 +714,19 @@ nav li:hover, nav li:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: left;
 }
 
-.projects ul img {
-  width: 40%;
+.projects ul .popsipoll-image-container {
+  width: 100%;
+}
+
+.projects ul .popsipoll-image-container img {
+  width: 100%;
+  position: relative;
+  right: 50px;
 }
 
 .projects ul .firebase {
@@ -535,5 +741,53 @@ nav li:hover, nav li:focus {
 }
 
 .projects ul p {
-  width: 70%;
+  margin-left: 0;
+}
+
+.projects .dejabrew {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.projects .dejabrew-image-container {
+  width: 100%;
+}
+
+.projects .dejabrew-image-container img {
+  width: 100%;
+  position: relative;
+  right: 50px;
+}
+
+.projects .adjacent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.projects .adjacent-image-container {
+  width: 100%;
+}
+
+.projects .adjacent-image-container img {
+  width: 100%;
+  position: relative;
+  right: 50px;
 }
