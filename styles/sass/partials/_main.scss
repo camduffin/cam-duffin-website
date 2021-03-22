@@ -9,8 +9,8 @@
 
 aside {
     position: absolute;
-    right: 12%;
-    top: 6%;
+    right: 10%;
+    top: 5.5%;
     z-index: 100;
     margin-right: 5%;
 
@@ -78,6 +78,19 @@ aside {
         padding: 10px;
         margin-left: 70px;
         color: $white;
+        transition: all .2s ease-in-out;
+        position: relative;
+        opacity: .8;
+        &:hover,
+        &:focus {
+            opacity: 1;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        &:active {
+            position: relative;
+            top: 2px;
+        }
     }
 
 }
@@ -89,10 +102,9 @@ aside {
     clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
     z-index: -200;
     margin: 0 auto;
-    height: 100vh;
+    padding-bottom: 100px;
     
     .skills-header {
-
         @include heading(3rem);
         padding-top: 100px;
     }
@@ -102,24 +114,37 @@ aside {
         color: $grey;
     }
 
-    ul {
+    .skills-list {
         display: flex;
         justify-content: space-between;
-        text-align: left;
-        margin-right: 100px;
         flex-wrap: wrap;
-    }
-
-    .fab, .fas {
-        color: $purple;
-        font-size: 3rem;
-        padding-top: 26px;
-    }
-
-    p {
-        @include paragraph(1rem);
         width: 80%;
+        li {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .fab, .fas {
+            color: $purple;
+            font-size: 3rem;
+            padding-top: 26px;
+        }
+    
+        p {
+            @include paragraph(1rem);
+            width: 80%;
+        }
     }
+
+    .soft-skills-container {
+        display: flex;
+        @include paragraph(1rem);
+        padding-bottom: 20px;
+        margin-top: 60px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
 }
 
 // PROJECTS
@@ -138,6 +163,24 @@ aside {
     
     h4 {
         @include subHeading(2rem);
+    }
+
+    .first-link, a {
+        @include paragraph(1.1rem);
+        text-decoration: none;
+        color: $pink;
+        opacity: .8;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    .first-link {
+        border-right: 1.5px solid black;
+        padding-right: 14px;;
+        margin-right: 4px;
     }
 
     ul {

@@ -12,7 +12,7 @@
     <header id="header">
             <div class="header-text wrapper" data-aos="fade-right" data-aos-duration="2000">
                 <h1>Cam Duffin</h1>
-                <h2>Web Developer</h2>
+                <h2>Front-End Web Developer</h2>
             </div>
             <div class="down-arrow">
                 <a href="#about-me">
@@ -20,6 +20,7 @@
                 </a>
             </div>
     </header>
+<!-- STICKY NAV -->
     <aside>
         <nav data-aos-duration="1000" data-aos="fade-left">
             <ul>
@@ -41,7 +42,8 @@
             </ul>
         </nav>
     </aside>
-        <main>
+    <!-- ABOUT ME -->
+    <main>
         <section class="about-me" id="about-me">
             <div class="inner-wrapper about-me-flex">
                 <div class="photo" data-aos="fade-right" data-aos-duration="1000">
@@ -51,19 +53,21 @@
                 <div class="about-me-text" data-aos="fade-left" data-aos-duration="1000">
                     <h3>Hello world!</h3>
                     <div class="bio-text">
-                        <p>I'm Cam Duffin, a creative front-end developer with experience building web applications with HTML5, SASS, and Javascript (ES6) + REACT.</p>    
-                        <p>I value myself as a leader with positive communication skills, and as the manager of a small team in the entertainment industry I've developed a strong work ethic and have honed effective time management. I love pairing web development skill and creative experience to build clean, responsive and web accessible code.</p> 
+                        <p>I'm Cam Duffin, a creative front-end developer with experience building web applications in HTML5, SASS, and Javascript (ES6) + REACT.</p>    
+                        <p>I value myself as a leader with positive communication skills, and as the manager of a small team in the entertainment industry I've developed a strong work ethic and effective time management. I love pairing web development skill and creative experience to build clean, responsive and web accessible code.</p> 
                     </div>
                 </div>
             </div>
         </section>
+<!-- SKILLS -->
         <section class="skills" id="skills">
-            <div class="inner-wrapper" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="skills-header">
+            <div class="inner-wrapper">
+                <div class="skills-header" data-aos="zoom-in" data-aos-duration="1000">
                     <h3>Skills</h3>
                     <h4>Web Development</h4>
                 </div>
-                <ul>
+
+                <ul class="skills-list" data-aos="zoom-in" data-aos-duration="1000">
                     <li>
                         <i class="fab fa-html5"></i>
                         <p>HTML5</p>
@@ -96,42 +100,93 @@
                         <i class="fas fa-mobile-alt"></i>
                         <p>Responsive Design</p>
                     </li>
+                    <li>
+                        <i class="fab fa-bootstrap"></i>
+                        <p>Bootstrap</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-universal-access"></i>
+                        <p>Accessibility</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-terminal"></i>
+                        <p>RESTful API's</p>
+                    </li>
                 </ul>
-                <div>
-                    <h4>Non-technical + Music</h4>
+
+                <div class="soft-skills-container" data-aos="zoom-in" data-aos-duration="1000">
+                    <div>
+                        <div>
+                            <h4>Working on...</h4>
+                        </div>
+        
+                        <ul class="working-on">
+                            <li>
+                                <p>Gatsby.js</p>
+                            </li>
+                            <li>
+                                <p>Next.js</p>
+                            </li>
+                            <li>
+                                <p>Udemy SQL + Database course</p>
+                            </li>
+                            <li>
+                                <p></p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h4>Non-tech + Music Skills</h4>
+                        </div>
+        
+                        <ul>
+                            <li>
+                                <p>Project Management</p>
+                            </li>
+                            <li>
+                                <p>Collaboration</p>
+                            </li>
+                            <li>
+                                <p>Customer Service/Hospitality</p>
+                            </li>
+                            <li>
+                                <p>Recording (Logic Pro X)</p>
+                            </li>
+                            <li>
+                                <p>Vocals, Drums, Pianos, Guitars, Synthesizers</p>
+                            </li>
+                            <li>
+                                <p>Songwriting</p>
+                            </li>
+                        </ul>     
+                    </div>
                 </div>
-                <ul>
-                    <li>
-                        <p>Artist Management</p>
-                    </li>
-                    <li>
-                        <p>Collaboration</p>
-                    </li>
-                    <li>
-                        <p>Logic Pro X</p>
-                    </li>
-                    <li>
-                        <p>Vocals, Drums, Piano, Guitar, Synthesizers</p>
-                    </li>
-                </ul>
+
             </div>
         </section>
+<!-- PROJECTS -->
         <section class="projects" id="projects">
             <div class="inner-wrapper">
                 <h3>Projects</h3>
+    
                 <ul>
                     <li class="popsipoll" data-aos="fade-right" data-aos-duration="1000">
+
                         <div class="popsipoll-image-container">
                             <img src="./assets/macbook.png">
                             <img class="popsipoll-overlay" src="" alt="">
                         </div>
+
                         <div class="popsipoll-text">
                             <h4>Popsipoll</h4>
                             <div>
-                                <a href="https://popsipoll.netlify.app/" target="_blank" rel="noreferrer noopener">Live</a>
+                                <a class="first-link" href="https://popsipoll.netlify.app/" target="_blank" rel="noreferrer noopener">Live</a>
                                 <a href="https://github.com/Cam-Fernanda-Melissa-Jake-Project4/popsipoll" target="_blank" rel="noreferrer noopener">Github</a>
                             </div>
                             <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
+
                             <ul class="popsipoll-icons">
                                 <li>
                                     <i class="fab fa-sass"></i>
@@ -150,12 +205,13 @@
                     </li>
                     <li class="dejabrew" data-aos="fade-left" data-aos-duration="1000">
                         <div class="dejabrew-text">
-                            <h4>Deja Brew</h4>
+                            <h4>Déjà Brew</h4>
                             <div>
-                                <a href="https://deja-brew.netlify.app/" target="_blank" rel="noreferrer noopener">Live</a>
+                                <a class="first-link" href="https://deja-brew.netlify.app/" target="_blank" rel="noreferrer noopener">Live</a>
                                 <a href="https://github.com/camduffin/project-3-deja-brew" target="_blank" rel="noreferrer noopener">Github</a>
                             </div>
                             <p>A brewery finder app that allows users to search for breweries in the U.S. by keyword, city or state. Get google map directions to any brewery from your location!</p>
+
                             <ul class="dejabrew-icons">
                                 <li>
                                     <i class="fab fa-sass"></i>
@@ -180,7 +236,7 @@
                         <div class="adjacent-text">
                             <h4>Adjacent</h4>
                             <div>
-                                <a href="https://steph-cam.github.io/adjacent-app/" target="_blank" rel="noreferrer noopener">Live</a>
+                                <a class="first-link" href="https://steph-cam.github.io/adjacent-app/" target="_blank" rel="noreferrer noopener">Live</a>
                                 <a href="https://github.com/Steph-Cam/adjacent-app" target="_blank" rel="noreferrer noopener">Github</a>
                             </div>
                             <p>A music suggestion app that uses two separate API's. Users can type in one of their favourite artists to get suggested similar artist results.</p>
@@ -204,6 +260,7 @@
             </div>
         </section>
     </main>
+<!-- CONTACT -->
     <section id="contact" class="contact">
         <div class="inner-wrapper">
             <h3 data-aos="fade-right" >Contact</h3>
@@ -223,6 +280,7 @@
             <div class="in-touch-text" data-aos="fade-left" data-aos-duration="1000">
                 <h4>Get in touch!</h4>
                 <p>Don't hesitate to reach out via email or social media. I'd love to chat about work opportunities, the Vancouver Canucks or crazy guitar pedals....</p>
+                <a mailto="camduffin@gmail.com">camduffin@gmail.com</a>
             </div>
             <nav class="contact-nav" data-aos="fade-right" data-aos-duration="1000">
                 <ul>
@@ -254,8 +312,6 @@
             <i class="fas fa-long-arrow-alt-up"></i>
         </div>
     </section>
-
-
 
     <footer class="bottom-bar">
         <p>Made by Cam Duffin 2021</p>

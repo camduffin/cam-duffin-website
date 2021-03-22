@@ -11,3 +11,7 @@ $lightgrey: #EBEBEB;
 @import 'partials/setup';
 @import 'partials/header-footer';
 @import 'partials/main';
+
+html {
+    scroll-behavior: smooth;
+}

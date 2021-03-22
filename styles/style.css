@@ -278,6 +278,7 @@ header .down-arrow {
 }
 
 header .down-arrow a {
+  padding: 50px;
   color: #ffff;
 }
 
@@ -436,12 +437,19 @@ header .header-text h2 {
   opacity: .9;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  position: relative;
 }
 
-.contact form button:hover {
+.contact form button:hover, .contact form button:focus {
   opacity: 1;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.contact form button:active {
+  position: relative;
+  top: 2px;
 }
 
 .contact .in-touch {
@@ -516,7 +524,7 @@ footer {
   width: 100%;
   bottom: 0;
   text-align: center;
-  background-color: #000000;
+  background-color: #312a63;
   font-size: 1rem;
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
@@ -529,6 +537,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  opacity: .7;
   bottom: 0;
 }
 
@@ -540,8 +549,8 @@ footer {
 
 aside {
   position: absolute;
-  right: 12%;
-  top: 6%;
+  right: 10%;
+  top: 5.5%;
   z-index: 100;
   margin-right: 5%;
 }
@@ -632,6 +641,22 @@ aside nav li:hover, aside nav li:focus {
   padding: 10px;
   margin-left: 70px;
   color: #ffff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  position: relative;
+  opacity: .8;
+}
+
+.about-me button:hover, .about-me button:focus {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.about-me button:active {
+  position: relative;
+  top: 2px;
 }
 
 .skills {
@@ -640,7 +665,7 @@ aside nav li:hover, aside nav li:focus {
           clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
   z-index: -200;
   margin: 0 auto;
-  height: 100vh;
+  padding-bottom: 100px;
 }
 
 .skills .skills-header {
@@ -657,31 +682,51 @@ aside nav li:hover, aside nav li:focus {
   color: #686464;
 }
 
-.skills ul {
+.skills .skills-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  text-align: left;
-  margin-right: 100px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 80%;
 }
 
-.skills .fab, .skills .fas {
+.skills .skills-list li {
+  text-align: center;
+  padding: 20px;
+}
+
+.skills .skills-list .fab, .skills .skills-list .fas {
   color: #312a63;
   font-size: 3rem;
   padding-top: 26px;
 }
 
-.skills p {
+.skills .skills-list p {
   font-size: 1rem;
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
   width: 80%;
+}
+
+.skills .soft-skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  padding-bottom: 20px;
+  margin-top: 60px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .projects {
@@ -709,6 +754,27 @@ aside nav li:hover, aside nav li:focus {
   font-size: 2rem;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 700;
+}
+
+.projects .first-link, .projects a {
+  font-size: 1.1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: #F65E8D;
+  opacity: .8;
+}
+
+.projects .first-link:hover, .projects .first-link:focus, .projects a:hover, .projects a:focus {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.projects .first-link {
+  border-right: 1.5px solid black;
+  padding-right: 14px;
+  margin-right: 4px;
 }
 
 .projects ul {
@@ -898,4 +964,8 @@ aside nav li:hover, aside nav li:focus {
 .projects .adjacent p {
   margin-right: 0;
   width: 80%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
