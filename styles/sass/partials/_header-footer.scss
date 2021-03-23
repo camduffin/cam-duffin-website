@@ -1,5 +1,5 @@
 header {
-    background-color: $purple;
+    background-color: $darkgrey;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -14,7 +14,6 @@ header {
 
 
     .down-arrow {
-        
         position: absolute;
         bottom: 18%;
         font-size: 2rem;
@@ -63,144 +62,6 @@ header {
             margin-left: 10px;
             opacity: .8;
         }
-    }
-
-}
-
-
-// Contact section
-
-.contact {
-    background-color: $darkgrey;
-    background-size: cover;
-    clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0 100%);
-    padding-bottom: 50px;
-
-    h3 {
-        @include subHeading(3rem);
-        color: $white;
-        padding-top: 150px;
-        margin-bottom: 80px;
-    }
-
-    form {
-
-        display: flex;
-        flex-direction: column;
-        height: 200px;
-        width: 700px;
-        justify-content: space-between;
-        @include paragraph(1rem);
-
-        div {
-            margin-bottom: 50px;
-
-            input[type="text"], input[type="email"] {
-                width: 245px;
-                background-color: transparent;
-                border: none;
-                border-left: 2px solid $white;
-                border-bottom: 2px solid $white;
-                padding: 7px;
-                color: $white;
-            }
-
-            input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
-                color: $white;
-            }
-        }
-
-        textarea {
-            resize: none;
-            background-color: transparent;
-            border: none;
-            width: 500px;
-            min-height: 200px;
-            border-left: 2px solid $white;
-            border-bottom: 2px solid $white;
-            color: $white;
-            padding: 7px;
-        }
-
-        button {
-            width: 200px;
-            margin-top: 50px;
-            border: none;
-            background-color: $purple;
-            font-size: 1.2rem;
-            padding: 10px;
-            color: $white;
-            padding: 10px;
-            opacity: .9;
-            transition: all .2s ease-in-out;
-            position: relative;
-            &:hover,
-            &:focus {
-                opacity: 1;
-                transform: scale(1.1);
-                cursor: pointer;
-            }
-            &:active {
-                position: relative;
-                top: 2px;
-            }
-        }
-
-        
-    .in-touch {
-        padding-top: 300px;
-        padding-bottom: 150px;
-
-        .in-touch-text {
-
-            margin-bottom: 100px;
-
-            h4 {
-                @include subHeading(2rem);
-                color: $white;
-            }
-    
-            p {
-                @include paragraph(1rem);
-                color: $white;
-                width: 60%;
-            }
-        }
-        
-    }
-
-    ul {
-        display: flex;
-        justify-content: flex-start;
-        width: 100%;
-
-        li {
-            padding-right: 50px;
-            margin: 0;
-    
-            .fab {
-                color: $pink;
-                font-size: 2.5rem;
-                opacity: 1;
-                transition: all .2s ease-in-out;
-            }
-    
-            .fab:hover, .fab:focus {
-                transform: scale(1.3);
-                opacity: 1;
-            }
-        }
-    }
-
-    a {
-        @include paragraph(1.4rem);
-        color: $white;
-        text-decoration: none;
-    }
-
-    .fas {
-        color: $grey;
-        font-size: 1.5rem;
     }
 
 }

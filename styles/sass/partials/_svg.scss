@@ -1,21 +1,46 @@
 .svg-top-right {
 
+    @keyframes Spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
     .blue-triangle {
         width: 13%;
         rotate: 40deg;
         position: absolute;
         top: 200px;
         left: 800px;
-        opacity: .6;
+        opacity: .5;
         filter: drop-shadow( 10px 10px 1px rgba(0, 0, 0, .7));
-    }
-
-    .bold-purple-circle {
-        width: 5%;
-        position: absolute;
-        top: 1200px;
-        right: 420px;
+        animation: Spin infinite 100s linear;
     }
 
 }
 
+.ripple {
+    width: 5%;
+    position: relative;
+    left: 90px;
+    bottom: 310px;
+    rotate: -30deg;
+    filter: drop-shadow( 2px 4px 1px rgba(0, 0, 0, .7));
+}
+
+.skills-svg {
+    width: 20%;
+    position: relative;
+    top: 80px;
+    left: 500px;
+}
+
+.cube {
+    width: 10%;
+    filter: drop-shadow( 6px 2px 1px $pink);
+    position: relative;
+    top: 200px;
+}

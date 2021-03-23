@@ -1,23 +1,35 @@
 const app = {};
 
+let mainNavLinks = document.querySelectorAll("aside nav ul li a");
+let mainSections = document.querySelectorAll("main section");
 
-// const app.lazyScroll = () => {
+let lastId;
+let cur = [];
 
-//     const downArrow = document.getElementsByClassName('down-arrow');
+app.activeHighlight = () => {
 
-//     downArrow.addEventListener('click', function (e) {
-//         e.preventDefault();
-
-//         const aboutMe = document.getElementById('about-me');
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
     
-//         aboutMe.scrollIntoView({behavior: smooth});
-//     })
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+    
+            if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+            ) {
+            link.classList.add("current");
+            } else {
+            link.classList.remove("current");
+            }
+        });
+    });
+}
 
-// }
 
 
 app.init = () => {
-
+    app.activeHighlight();
 }
 
 app.init();
