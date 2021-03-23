@@ -1,5 +1,6 @@
 const app = {};
 
+
 // const app.lazyScroll = () => {
 
 //     const downArrow = document.getElementsByClassName('down-arrow');

@@ -348,7 +348,7 @@ header .header-text h2 {
 }
 
 .contact {
-  background-color: #EBEBEB;
+  background-color: #232227;
   background-size: cover;
   -webkit-clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0 100%);
           clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0 100%);
@@ -359,7 +359,7 @@ header .header-text h2 {
   font-size: 3rem;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 700;
-  color: #000000;
+  color: #ffff;
   padding-top: 150px;
   margin-bottom: 80px;
 }
@@ -391,26 +391,26 @@ header .header-text h2 {
   width: 245px;
   background-color: transparent;
   border: none;
-  border-left: 2px solid #000000;
-  border-bottom: 2px solid #000000;
+  border-left: 2px solid #ffff;
+  border-bottom: 2px solid #ffff;
   padding: 7px;
-  color: #000000;
+  color: #ffff;
 }
 
 .contact form div input[type="text"]::-webkit-input-placeholder, .contact form div input[type="email"]::-webkit-input-placeholder, .contact form div textarea::-webkit-input-placeholder {
-  color: #000000;
+  color: #ffff;
 }
 
 .contact form div input[type="text"]:-ms-input-placeholder, .contact form div input[type="email"]:-ms-input-placeholder, .contact form div textarea:-ms-input-placeholder {
-  color: #000000;
+  color: #ffff;
 }
 
 .contact form div input[type="text"]::-ms-input-placeholder, .contact form div input[type="email"]::-ms-input-placeholder, .contact form div textarea::-ms-input-placeholder {
-  color: #000000;
+  color: #ffff;
 }
 
 .contact form div input[type="text"]::placeholder, .contact form div input[type="email"]::placeholder, .contact form div textarea::placeholder {
-  color: #000000;
+  color: #ffff;
 }
 
 .contact form textarea {
@@ -419,9 +419,9 @@ header .header-text h2 {
   border: none;
   width: 500px;
   min-height: 200px;
-  border-left: 2px solid #000000;
-  border-bottom: 2px solid #000000;
-  color: #000000;
+  border-left: 2px solid #ffff;
+  border-bottom: 2px solid #ffff;
+  color: #ffff;
   padding: 7px;
 }
 
@@ -465,7 +465,7 @@ header .header-text h2 {
   font-size: 2rem;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 700;
-  color: #000000;
+  color: #ffff;
 }
 
 .contact .in-touch .in-touch-text p {
@@ -473,7 +473,7 @@ header .header-text h2 {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
-  color: #000000;
+  color: #ffff;
   width: 60%;
 }
 
@@ -964,6 +964,24 @@ aside nav li:hover, aside nav li:focus {
 .projects .adjacent p {
   margin-right: 0;
   width: 80%;
+}
+
+.svg-top-right .blue-triangle {
+  width: 13%;
+  rotate: 40deg;
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  opacity: .6;
+  -webkit-filter: drop-shadow(10px 10px 1px rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(10px 10px 1px rgba(0, 0, 0, 0.7));
+}
+
+.svg-top-right .bold-purple-circle {
+  width: 5%;
+  position: absolute;
+  top: 1200px;
+  right: 420px;
 }
 
 html {

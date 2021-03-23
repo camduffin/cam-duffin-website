@@ -12,6 +12,7 @@ header {
     position: relative;
     z-index: -100;
 
+
     .down-arrow {
         
         position: absolute;
@@ -25,6 +26,7 @@ header {
             color: $white;
         }
     }
+    
 
     @keyframes bounce {
         
@@ -65,17 +67,18 @@ header {
 
 }
 
+
 // Contact section
 
 .contact {
-    background-color: $lightgrey;
+    background-color: $darkgrey;
     background-size: cover;
     clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0 100%);
     padding-bottom: 50px;
 
     h3 {
         @include subHeading(3rem);
-        color: $black;
+        color: $white;
         padding-top: 150px;
         margin-bottom: 80px;
     }
@@ -96,14 +99,14 @@ header {
                 width: 245px;
                 background-color: transparent;
                 border: none;
-                border-left: 2px solid $black;
-                border-bottom: 2px solid $black;
+                border-left: 2px solid $white;
+                border-bottom: 2px solid $white;
                 padding: 7px;
-                color: $black;
+                color: $white;
             }
 
             input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
-                color: $black;
+                color: $white;
             }
         }
 
@@ -113,9 +116,9 @@ header {
             border: none;
             width: 500px;
             min-height: 200px;
-            border-left: 2px solid $black;
-            border-bottom: 2px solid $black;
-            color: $black;
+            border-left: 2px solid $white;
+            border-bottom: 2px solid $white;
+            color: $white;
             padding: 7px;
         }
 
@@ -143,12 +146,6 @@ header {
             }
         }
 
-        // button::hover, button::focus {
-        //     transform: scale(1.1);
-        //     opacity: 1;
-        //     cursor: pointer;
-        // }
-    }
         
     .in-touch {
         padding-top: 300px;
@@ -160,12 +157,12 @@ header {
 
             h4 {
                 @include subHeading(2rem);
-                color: $black;
+                color: $white;
             }
     
             p {
                 @include paragraph(1rem);
-                color: $black;
+                color: $white;
                 width: 60%;
             }
         }
@@ -182,9 +179,9 @@ header {
             margin: 0;
     
             .fab {
-                color: $purple;
+                color: $pink;
                 font-size: 2.5rem;
-                opacity: .9;
+                opacity: 1;
                 transition: all .2s ease-in-out;
             }
     
@@ -197,6 +194,7 @@ header {
 
     a {
         @include paragraph(1.4rem);
+        color: $white;
         text-decoration: none;
     }
 
@@ -220,5 +218,4 @@ footer {
     justify-content: center;
     opacity: .7;
     bottom: 0;
-
 }

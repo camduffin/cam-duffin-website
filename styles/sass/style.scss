@@ -5,12 +5,14 @@ $purple: #312a63;
 $pink: #F65E8D;
 $grey: #686464;
 $lightgrey: #EBEBEB;
+$darkgrey: #232227;
 
 // imports
 @import 'partials/mixins';
 @import 'partials/setup';
 @import 'partials/header-footer';
 @import 'partials/main';
+@import 'partials/svg';
 
 html {
     scroll-behavior: smooth;
