@@ -25,3 +25,18 @@
     font-family: 'Helvetica Nue', sans-serif;
     font-weight: 400;
 }
+
+
+// Media Queries
+
+@mixin tabletMQ {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin smallTabletMQ {
+    @media (max-width: 710px) {
+        @content;
+    }
+}

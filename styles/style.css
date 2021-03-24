@@ -258,6 +258,7 @@ ul {
 }
 
 header {
+  background-color: #232227;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,7 +272,6 @@ header {
   height: 115vh;
   width: 100%;
   text-align: left;
-  width: 100%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
   position: relative;
@@ -288,6 +288,8 @@ header video {
   z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
 }
 
 header .arrow {
@@ -370,6 +372,12 @@ header .header-text {
   width: 100%;
 }
 
+@media (max-width: 710px) {
+  header .header-text {
+    margin-left: 100px;
+  }
+}
+
 header .header-text h1 {
   font-size: 5rem;
   font-family: 'Helvetica Nue', sans-serif;
@@ -384,6 +392,71 @@ header .header-text h2 {
   font-weight: 700;
   color: #F65E8D;
   margin-left: 10px;
+}
+
+aside {
+  position: absolute;
+  right: 10%;
+  top: 5.5%;
+  z-index: 100;
+  margin-right: 5%;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+  background-color: white;
+}
+
+@media (max-width: 1000px) {
+  aside {
+    position: fixed;
+    top: 0;
+    display: none;
+  }
+}
+
+aside .current {
+  position: relative;
+  right: 4px;
+  color: #5145a7;
+  font-size: 1.5rem;
+}
+
+aside nav {
+  font-size: 1.5rem;
+  color: #F65E8D;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  width: 200px;
+  border-top: 2px solid #F65E8D;
+  border-left: 2px solid #F65E8D;
+  position: fixed;
+  padding: 14px;
+  opacity: .9;
+}
+
+@media (max-width: 1000px) {
+  aside nav {
+    width: 100px;
+  }
+}
+
+aside nav li {
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+}
+
+aside nav li a {
+  font-size: 1.3rem;
+  color: #F65E8D;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 5px;
+}
+
+aside nav li:hover, aside nav li:focus {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  cursor: pointer;
 }
 
 footer {
@@ -411,58 +484,13 @@ footer {
 .inner-wrapper {
   margin: 0 auto;
   max-width: 1000px;
-  width: 60%;
+  width: 80%;
 }
 
-aside {
-  position: absolute;
-  right: 10%;
-  top: 5.5%;
-  z-index: 100;
-  margin-right: 5%;
-  -webkit-transition: all ease-in-out .2s;
-  transition: all ease-in-out .2s;
-  background-color: white;
-}
-
-aside .current {
-  position: relative;
-  right: 4px;
-  color: #5145a7;
-  font-size: 1.5rem;
-}
-
-aside nav {
-  font-size: 1.5rem;
-  color: #F65E8D;
-  font-family: 'Helvetica Nue', sans-serif;
-  font-weight: 400;
-  width: 200px;
-  border-top: 2px solid #F65E8D;
-  border-left: 2px solid #F65E8D;
-  position: fixed;
-  padding: 14px;
-  opacity: .9;
-}
-
-aside nav li {
-  -webkit-transition: all ease-in-out .2s;
-  transition: all ease-in-out .2s;
-}
-
-aside nav li a {
-  font-size: 1.3rem;
-  color: #F65E8D;
-  font-family: 'Helvetica Nue', sans-serif;
-  font-weight: 400;
-  text-decoration: none;
-  padding: 5px;
-}
-
-aside nav li:hover, aside nav li:focus {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
-  cursor: pointer;
+@media (max-width: 1000px) {
+  .inner-wrapper {
+    width: 90%;
+  }
 }
 
 .about-me {
@@ -479,6 +507,12 @@ aside nav li:hover, aside nav li:focus {
   font-weight: 700;
 }
 
+@media (max-width: 1000px) {
+  .about-me {
+    width: 100%;
+  }
+}
+
 .about-me .about-me-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -491,6 +525,15 @@ aside nav li:hover, aside nav li:focus {
           justify-content: space-between;
 }
 
+@media (max-width: 710px) {
+  .about-me .about-me-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about-me .about-me-text {
   margin: 40px;
 }
@@ -500,6 +543,7 @@ aside nav li:hover, aside nav li:focus {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  width: 80%;
 }
 
 .about-me .photo {
@@ -509,16 +553,18 @@ aside nav li:hover, aside nav li:focus {
 }
 
 .about-me .photo img {
-  width: 100%;
+  min-width: 100px;
+  max-width: 240px;
 }
 
-.about-me .button {
+.about-me .photo .button {
   border: none;
+  display: block;
   text-decoration: none;
   background-color: #312a63;
   font-size: 1.2rem;
   padding: 10px;
-  margin-left: 60px;
+  text-align: center;
   color: #ffff;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -526,14 +572,14 @@ aside nav li:hover, aside nav li:focus {
   opacity: .8;
 }
 
-.about-me .button:hover, .about-me .button:focus {
+.about-me .photo .button:hover, .about-me .photo .button:focus {
   opacity: 1;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
 }
 
-.about-me .button:active {
+.about-me .photo .button:active {
   position: relative;
   top: 2px;
 }
@@ -565,12 +611,11 @@ aside nav li:hover, aside nav li:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 600px;
+  width: 60%;
 }
 
 .skills .skills-list li {
@@ -613,9 +658,8 @@ aside nav li:hover, aside nav li:focus {
   padding-bottom: 20px;
   margin-top: 60px;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .projects {
@@ -693,6 +737,15 @@ aside nav li:hover, aside nav li:focus {
   margin: 100px 0;
 }
 
+@media (max-width: 1000px) {
+  .projects .popsipoll {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .projects .popsipoll .popsipoll-image-container {
   width: 100%;
 }
@@ -728,6 +781,12 @@ aside nav li:hover, aside nav li:focus {
   right: 180px;
 }
 
+@media (max-width: 1000px) {
+  .projects .popsipoll .popsipoll-icons {
+    right: 25%;
+  }
+}
+
 .projects .popsipoll .fab, .projects .popsipoll .fas {
   color: #312a63;
   font-size: 3rem;
@@ -743,13 +802,21 @@ aside nav li:hover, aside nav li:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-size: 1rem;
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .projects .dejabrew {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .projects .dejabrew .dejabrew-image-container {
@@ -811,6 +878,15 @@ aside nav li:hover, aside nav li:focus {
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
   margin: 100px 0;
+}
+
+@media (max-width: 1000px) {
+  .projects .adjacent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .projects .adjacent .adjacent-image-container {
@@ -1046,6 +1122,12 @@ aside nav li:hover, aside nav li:focus {
   font-size: 1.5rem;
 }
 
+.svg-top-right {
+  position: relative;
+  bottom: 40%;
+  left: 10%;
+}
+
 @-webkit-keyframes Spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -1069,26 +1151,13 @@ aside nav li:hover, aside nav li:focus {
 }
 
 .svg-top-right .blue-triangle {
-  width: 13%;
+  width: 100%;
   rotate: 40deg;
-  position: absolute;
-  top: 200px;
-  left: 800px;
   opacity: .5;
   -webkit-filter: drop-shadow(10px 10px 1px rgba(0, 0, 0, 0.7));
           filter: drop-shadow(10px 10px 1px rgba(0, 0, 0, 0.7));
   -webkit-animation: Spin infinite 100s linear;
           animation: Spin infinite 100s linear;
-}
-
-.ripple {
-  width: 5%;
-  position: relative;
-  left: 90px;
-  bottom: 310px;
-  rotate: -30deg;
-  -webkit-filter: drop-shadow(2px 4px 1px rgba(0, 0, 0, 0.7));
-          filter: drop-shadow(2px 4px 1px rgba(0, 0, 0, 0.7));
 }
 
 .skills-svg {

@@ -1,5 +1,9 @@
 .svg-top-right {
 
+    position: relative;
+    bottom: 40%;
+    left: 10%;
+
     @keyframes Spin {
         from {
             transform: rotate(0deg);
@@ -10,25 +14,13 @@
     }
 
     .blue-triangle {
-        width: 13%;
+        width: 100%;
         rotate: 40deg;
-        position: absolute;
-        top: 200px;
-        left: 800px;
         opacity: .5;
         filter: drop-shadow( 10px 10px 1px rgba(0, 0, 0, .7));
         animation: Spin infinite 100s linear;
     }
 
-}
-
-.ripple {
-    width: 5%;
-    position: relative;
-    left: 90px;
-    bottom: 310px;
-    rotate: -30deg;
-    filter: drop-shadow( 2px 4px 1px rgba(0, 0, 0, .7));
 }
 
 .skills-svg {

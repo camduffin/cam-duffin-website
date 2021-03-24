@@ -2,50 +2,10 @@
 .inner-wrapper {
     margin: 0 auto;
     max-width: 1000px;
-    width: 60%;
-}
+    width: 80%;
 
-// STICKY NAV
-
-aside {
-    position: absolute;
-    right: 10%;
-    top: 5.5%;
-    z-index: 100;
-    margin-right: 5%;
-    transition: all ease-in-out .2s;
-    background-color: white;
-
-    .current {
-        position: relative;
-        right: 4px;
-        color: #5145a7;
-        font-size: 1.5rem;
-    }
-
-    nav {
-        @include nav(1.5rem);
-        width: 200px;
-        border-top: 2px solid $pink;
-        border-left: 2px solid $pink;
-        position: fixed;
-        padding: 14px;
-        opacity: .9;
-    
-        li {
-            transition: all ease-in-out .2s;
-    
-            a {
-                @include nav(1.3rem);
-                text-decoration: none;
-                padding: 5px;
-            }
-        }
-    
-        li:hover, li:focus {
-            transform: scale(1.08);
-            cursor: pointer;
-        }
+    @include tabletMQ {
+        width: 90%;
     }
 }
 
@@ -57,11 +17,18 @@ aside {
     display: flex;
     align-items: center;
     @include heading(2rem);
+    @include tabletMQ {
+        width: 100%;
+    }
 
     .about-me-flex {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include smallTabletMQ {
+            flex-direction: column;
+        }
     }
 
     .about-me-text {
@@ -70,6 +37,7 @@ aside {
 
     .bio-text {
         @include paragraph(1rem);
+        width: 80%;
     }
 
     .photo {
@@ -77,32 +45,34 @@ aside {
         max-width: 35%;
         margin: 0;
         img {
-            width: 100%;
+            min-width: 100px;
+            max-width: 240px;
+        }
+        .button {
+            border: none;
+            display: block;
+            text-decoration: none;
+            background-color: $purple;
+            font-size: 1.2rem;
+            padding: 10px;
+            text-align: center;
+            color: $white;
+            transition: all .2s ease-in-out;
+            position: relative;
+            opacity: .8;
+            &:hover,
+            &:focus {
+                opacity: 1;
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+            &:active {
+                position: relative;
+                top: 2px;
+            }
         }
     }
 
-    .button {
-        border: none;
-        text-decoration: none;
-        background-color: $purple;
-        font-size: 1.2rem;
-        padding: 10px;
-        margin-left: 60px;
-        color: $white;
-        transition: all .2s ease-in-out;
-        position: relative;
-        opacity: .8;
-        &:hover,
-        &:focus {
-            opacity: 1;
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-        &:active {
-            position: relative;
-            top: 2px;
-        }
-    }
 
 }
 
@@ -127,9 +97,9 @@ aside {
 
     .skills-list {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
-        width: 600px;
+        width: 60%;
         li {
             text-align: center;
             padding-right: 20px;
@@ -163,7 +133,7 @@ aside {
         padding-bottom: 20px;
         margin-top: 60px;
         width: 100%;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
 }
@@ -220,6 +190,10 @@ aside {
         @include paragraph(1rem);
         margin: 100px 0;
 
+        @include tabletMQ {
+            flex-direction: column;
+        }
+
         .popsipoll-image-container {
             width: 100%;
             img {
@@ -240,6 +214,10 @@ aside {
             text-align: left;
             position: relative;
             right: 180px;
+
+            @include tabletMQ {
+                right: 25%;
+            }
         }
     
         .fab, .fas {
@@ -258,13 +236,19 @@ aside {
 
     .dejabrew {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         @include paragraph(1rem);
+        @include tabletMQ {
+            flex-direction: column-reverse;
+        }
 
         .dejabrew-image-container {
             width: 100%;
             img {
                 width: 100%;
+                // @include tabletMQ {
+                //     width: 70%;
+                // }
             }
         }
 
@@ -303,6 +287,9 @@ aside {
         justify-content: space-between;
         @include paragraph(1rem);
         margin: 100px 0;
+        @include tabletMQ {
+            flex-direction: column;
+        }
     
         .adjacent-image-container {
             width: 100%;
