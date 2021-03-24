@@ -258,7 +258,6 @@ ul {
 }
 
 header {
-  background-color: #232227;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,6 +278,18 @@ header {
   z-index: -100;
 }
 
+header video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 header .arrow {
   position: absolute;
   bottom: 20%;
@@ -289,15 +300,15 @@ header .arrow {
 
 header .arrow span {
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border-bottom: 3px solid #06A8FF;
   border-right: 3px solid #06A8FF;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin: -10px;
-  -webkit-animation: animate 2s infinite;
-          animation: animate 2s infinite;
+  -webkit-animation: animate 2.4s infinite;
+          animation: animate 2.4s infinite;
 }
 
 header .arrow span:nth-child(2) {
@@ -365,7 +376,6 @@ header .header-text h1 {
   font-weight: 700;
   color: #ffff;
   margin-bottom: 0;
-  opacity: .8;
 }
 
 header .header-text h2 {
@@ -374,7 +384,6 @@ header .header-text h2 {
   font-weight: 700;
   color: #F65E8D;
   margin-left: 10px;
-  opacity: .8;
 }
 
 footer {

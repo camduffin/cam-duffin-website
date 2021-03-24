@@ -1,5 +1,5 @@
 header {
-    background-color: $darkgrey;
+    // background-color: $darkgrey;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -12,20 +12,17 @@ header {
     position: relative;
     z-index: -100;
 
+    video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
 
-    // .down-arrow {
-    //     position: absolute;
-    //     bottom: 18%;
-    //     font-size: 2rem;
-    //     opacity: .6;
-    //     animation: bounce 3s infinite;
-        
-    //     a {
-    //         padding: 50px;
-    //         color: $white;
-    //     }
-    // }
-    
     .arrow{
         position: absolute;
         bottom: 20%;
@@ -35,13 +32,13 @@ header {
 
     .arrow span {
         display: block;
-        width: 25px;
-        height: 25px;
+        width: 40px;
+        height: 40px;
         border-bottom: 3px solid #06A8FF;
         border-right: 3px solid #06A8FF;
         transform: rotate(45deg);
         margin: -10px;
-        animation: animate 2s infinite;
+        animation: animate 2.4s infinite;
     }
     .arrow span:nth-child(2){
         animation-delay: -0.2s;
@@ -79,14 +76,12 @@ header {
             @include heading(5rem);
             color: $white;
             margin-bottom: 0;
-            opacity: .8;
         }
     
         h2 {
             @include subHeading(1.3rem);
             color: $pink;
             margin-left: 10px;
-            opacity: .8;
         }
     }
 

@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-stairs" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F65E8D" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-<path d="M4 18h4v-4h4v-4h4v-4h4" />
-</svg>
+<svg fill="none" height="100" stroke="#f65e8d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h24v24h-24z" fill="none" stroke="none"/><path d="m4 18h4v-4h4v-4h4v-4h4"/></svg>
