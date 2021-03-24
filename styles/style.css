@@ -227,17 +227,28 @@ html {
   overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 62.5%;
   position: relative;
   z-index: -1;
+  -webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
   width: 80%;
+}
+
+.projects-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 75%;
 }
 
 ul {
@@ -268,47 +279,66 @@ header {
   z-index: -100;
 }
 
-header .down-arrow {
+header .arrow {
   position: absolute;
-  bottom: 18%;
-  font-size: 2rem;
-  opacity: .6;
-  -webkit-animation: bounce 3s infinite;
-          animation: bounce 3s infinite;
+  bottom: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-header .down-arrow a {
-  padding: 50px;
-  color: #ffff;
+header .arrow span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 3px solid #06A8FF;
+  border-right: 3px solid #06A8FF;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: -10px;
+  -webkit-animation: animate 2s infinite;
+          animation: animate 2s infinite;
 }
 
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+header .arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+header .arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-20px, -20px);
   }
-  40% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+  50% {
+    opacity: 1;
   }
-  60% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(20px, 20px);
   }
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-20px, -20px);
   }
-  40% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+  50% {
+    opacity: 1;
   }
-  60% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(20px, 20px);
   }
 }
 
@@ -473,12 +503,13 @@ aside nav li:hover, aside nav li:focus {
   width: 100%;
 }
 
-.about-me button {
+.about-me .button {
   border: none;
+  text-decoration: none;
   background-color: #312a63;
   font-size: 1.2rem;
   padding: 10px;
-  margin-left: 70px;
+  margin-left: 60px;
   color: #ffff;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -486,14 +517,14 @@ aside nav li:hover, aside nav li:focus {
   opacity: .8;
 }
 
-.about-me button:hover, .about-me button:focus {
+.about-me .button:hover, .about-me .button:focus {
   opacity: 1;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
 }
 
-.about-me button:active {
+.about-me .button:active {
   position: relative;
   top: 2px;
 }
@@ -658,7 +689,7 @@ aside nav li:hover, aside nav li:focus {
 }
 
 .projects .popsipoll .popsipoll-image-container img {
-  width: 120%;
+  width: 100%;
 }
 
 .projects .popsipoll .popsipoll-text {
@@ -669,7 +700,6 @@ aside nav li:hover, aside nav li:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 80px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -679,11 +709,14 @@ aside nav li:hover, aside nav li:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 50%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  text-align: left;
+  position: relative;
+  right: 180px;
 }
 
 .projects .popsipoll .fab, .projects .popsipoll .fas {
@@ -708,7 +741,6 @@ aside nav li:hover, aside nav li:focus {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
-  margin: 100px 0;
 }
 
 .projects .dejabrew .dejabrew-image-container {
@@ -736,14 +768,15 @@ aside nav li:hover, aside nav li:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 30%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  text-align: left;
+  position: relative;
+  right: 195px;
 }
 
 .projects .dejabrew .fab, .projects .dejabrew .fas {
@@ -787,21 +820,31 @@ aside nav li:hover, aside nav li:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 80px;
 }
 
 .projects .adjacent .adjacent-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 80%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  text-align: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  right: 50px;
+}
+
+.projects .adjacent .adjacent-icons li:nth-last-of-type(2) {
+  margin-left: 40px;
+}
+
+.projects .adjacent .adjacent-icons li:nth-last-of-type(2) .fa-js-square {
+  position: relative;
+  left: 10px;
 }
 
 .projects .adjacent .fab, .projects .adjacent .fas {
@@ -1052,8 +1095,4 @@ aside nav li:hover, aside nav li:focus {
           filter: drop-shadow(6px 2px 1px #F65E8D);
   position: relative;
   top: 200px;
-}
-
-html {
-  scroll-behavior: smooth;
 }

@@ -12,17 +12,20 @@
     <header id="header">
         <div class="header-text wrapper" data-aos="fade-right" data-aos-duration="2000">
             <h1>Cam Duffin</h1>
-            <h2>Front-End Web Developer</h2>
+            <h2>Web Developer</h2>
         </div>
-        <div class="down-arrow">
-            <a href="#about-me">
-                <i class="fas fa-long-arrow-alt-down"></i>
-            </a>
-        </div>
+        <a href="#about-me">
+            <div class="arrow" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
         <div class="svg-top-right">
             <img class="blue-triangle" src="./assets/triangle-seagreen.svg" data-aos-duration="1000" data-aos="fade-left">
         </div>
     </header>
+    <div class="overlay" aria-hidden="true"></div>
     <!-- STICKY NAV -->
     <aside>
         <nav data-aos-duration="1000" data-aos="fade-left">
@@ -48,13 +51,13 @@
     <!-- ABOUT ME -->
     <main>
         <section class="about-me" id="about-me">
-            <img class="ripple" src="./assets/ripple.svg" data-aos="fade-left" data-aos-duration="1000">
+            <img class="ripple" src="./assets/ripple.svg" data-aos="fade-left" data-aos-duration="800">
             <div class="inner-wrapper about-me-flex">
-                <div class="photo" data-aos="fade-right" data-aos-duration="1000">
+                <div class="photo" data-aos="fade-right" data-aos-duration="800">
                     <img src="./assets/headshot.jpg" alt="Photo of Cameron Duffin">
-                    <button>Resume in PDF</button>
+                    <a class="button" href="./assets/Cam Duffin Resume.pdf" target="_blank">Resume in PDF</a>
                 </div>
-                <div class="about-me-text" data-aos="fade-left" data-aos-duration="1000">
+                <div class="about-me-text" data-aos="fade-left" data-aos-duration="800">
                     <h3>Hello world!</h3>
                     <div class="bio-text">
                         <p>I'm Cam Duffin, a creative front-end developer with experience building web applications in HTML5, SASS, and Javascript (ES6) + REACT.</p>    
@@ -66,12 +69,12 @@
 <!-- SKILLS -->
         <section class="skills" id="skills">
             <div class="inner-wrapper">
-                <div class="skills-header" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="skills-header" data-aos="zoom-in" data-aos-duration="500">
                     <h3>Skills</h3>
                     <h4>Web Development</h4>
                 </div>
 
-                <ul class="skills-list" data-aos="zoom-in" data-aos-duration="1000">
+                <ul class="skills-list" data-aos="zoom-in" data-aos-duration="600">
                     <li>
                         <i class="fab fa-html5"></i>
                         <p>HTML5</p>
@@ -172,14 +175,14 @@
         </section>
 <!-- PROJECTS -->
         <section class="projects" id="projects">
-            <div class="inner-wrapper">
+            <div class="projects-wrapper">
                 <h3>Projects</h3>
     
                 <ul>
                     <li class="popsipoll" data-aos="fade-right" data-aos-duration="1000">
 
                         <div class="popsipoll-image-container">
-                            <img src="./assets/macbook.png">
+                            <img src="./assets/macbook/macbook-popsipoll.png">
                             <img class="popsipoll-overlay" src="" alt="">
                         </div>
 
@@ -188,8 +191,8 @@
                             <div>
                                 <a class="first-link" href="https://popsipoll.netlify.app/" target="_blank" rel="noreferrer noopener">Live</a>
                                 <a href="https://github.com/Cam-Fernanda-Melissa-Jake-Project4/popsipoll" target="_blank" rel="noreferrer noopener">Github</a>
+                                <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
                             </div>
-                            <p>An anonymous voting app that allows the user to create a custom poll, and share a secret url with friends. Features include unlimited custom poll booths, unique shareable links after creation, and a global dark mode.</p>
 
                             <ul class="popsipoll-icons">
                                 <li>
@@ -228,13 +231,13 @@
                             </ul>
                         </div>
                         <div class="dejabrew-image-container">
-                            <img src="./assets/macbook.png">
+                            <img src="./assets/macbook/macbook-dejabrew.png">
                             <img class="dejabrew-overlay" src="" alt="">
                         </div>
                     </li>
                     <li class="adjacent" data-aos="fade-right" data-aos-duration="1000">
                         <div class="adjacent-image-container">
-                            <img src="./assets/macbook.png">
+                            <img src="./assets/macbook/macbook-adjacent.png">
                             <img class="adjacent-overlay" src="" alt="">
                         </div>
                         <div class="adjacent-text">

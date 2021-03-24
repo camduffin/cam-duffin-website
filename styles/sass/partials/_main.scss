@@ -82,12 +82,13 @@ aside {
         }
     }
 
-    button {
+    .button {
         border: none;
+        text-decoration: none;
         background-color: $purple;
         font-size: 1.2rem;
         padding: 10px;
-        margin-left: 70px;
+        margin-left: 60px;
         color: $white;
         transition: all .2s ease-in-out;
         position: relative;
@@ -223,21 +224,23 @@ aside {
         .popsipoll-image-container {
             width: 100%;
             img {
-                width: 120%;
+                width: 100%;
             }
         }
 
         .popsipoll-text {
             display: flex;
             flex-direction: column;
-            margin-left: 80px;
             justify-content: center;
         }
 
         .popsipoll-icons {
             display: flex;
-            width: 100%;
+            width: 50%;
             flex-direction: row;
+            text-align: left;
+            position: relative;
+            right: 180px;
         }
     
         .fab, .fas {
@@ -258,7 +261,6 @@ aside {
         display: flex;
         justify-content: space-between;
         @include paragraph(1rem);
-        margin: 100px 0;
 
         .dejabrew-image-container {
             width: 100%;
@@ -275,10 +277,11 @@ aside {
 
         .dejabrew-icons {
             display: flex;
-            width: 100%;
+            width: 30%;
             flex-direction: row;
             justify-content: space-around;
-            text-align: left;
+            position: relative;
+            right: 195px;
         }
     
         .fab, .fas {
@@ -312,16 +315,26 @@ aside {
         .adjacent-text {
             display: flex;
             flex-direction: column;
-            margin-left: 80px;
         }
 
         .adjacent-icons {
             display: flex;
-            width: 100%;
+            width: 80%;
             flex-direction: row;
-            justify-content: space-around;
-            text-align: left;
+            justify-content: space-between;
+            position: relative;
+            right: 50px;
         }
+
+        .adjacent-icons li:nth-last-of-type(2) {
+            margin-left: 40px;
+
+            .fa-js-square {
+                position: relative;
+                left: 10px;
+            }
+        }
+
     
         .fab, .fas {
             color: $purple;
