@@ -16,9 +16,11 @@
     margin-top: 100px;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
     @include heading(2rem);
     @include tabletMQ {
         width: 100%;
+        margin-bottom: 100px;
     }
 
     .about-me-flex {
@@ -33,6 +35,10 @@
 
     .about-me-text {
         margin: 40px;
+        @include smallTabletMQ {
+            margin: 10px 0 10px 10px;
+        }
+        overflow-x: hidden;
     }
 
     .bio-text {
@@ -43,6 +49,9 @@
     .photo {
         padding-top: 60px;
         max-width: 35%;
+        @include tabletMQ {
+            max-width: 100%;
+        }
         margin: 0;
         img {
             min-width: 100px;
@@ -72,8 +81,6 @@
             }
         }
     }
-
-
 }
 
 // SKILLS
@@ -134,6 +141,9 @@
         margin-top: 60px;
         width: 100%;
         justify-content: space-around;
+        @include smallTabletMQ {
+            flex-direction: column;
+        }
     }
 
 }
@@ -141,7 +151,7 @@
 // PROJECTS
 
 .projects {
-
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -192,6 +202,7 @@
 
         @include tabletMQ {
             flex-direction: column;
+            margin: 0;
         }
 
         .popsipoll-image-container {
@@ -246,9 +257,6 @@
             width: 100%;
             img {
                 width: 100%;
-                // @include tabletMQ {
-                //     width: 70%;
-                // }
             }
         }
 
@@ -265,6 +273,10 @@
             justify-content: space-around;
             position: relative;
             right: 195px;
+
+            @include bigPhoneMQ {
+                right: 60px;
+            }
         }
     
         .fab, .fas {
@@ -336,7 +348,6 @@
 
 }
 
-
 // Contact section
 
 .contact {
@@ -345,10 +356,15 @@
     clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0 100%);
     padding-bottom: 30px;
     position: relative;
+    overflow-x: hidden;
 
     .cube {
         position: absolute;
         left: 65%;
+        @include smallTabletMQ {
+            left: 80%;
+            bottom: 90%;
+        }
     }
 
     h3 {
@@ -362,12 +378,17 @@
         display: flex;
         flex-direction: column;
         height: 100px;
-        width: 700px;
+        width: 100%;
         justify-content: space-between;
         @include paragraph(1rem);
 
         div {
             margin-bottom: 50px;
+
+            @include bigPhoneMQ {
+                display: flex;
+                flex-direction: column;
+            }
 
             input[type="text"], input[type="email"] {
                 width: 245px;
@@ -377,6 +398,10 @@
                 border-bottom: 2px solid $white;
                 padding: 7px;
                 color: $white;
+
+                @include bigPhoneMQ {
+                    width: 100%;
+                }
             }
 
             input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
@@ -394,6 +419,10 @@
             border-bottom: 2px solid $white;
             color: $white;
             padding: 7px;
+
+            @include bigPhoneMQ {
+                width: 100%;
+            }
         }
 
         button {
@@ -418,6 +447,10 @@
                 position: relative;
                 top: 2px;
             }
+
+            @include bigPhoneMQ {
+                width: 100%;
+            }
         }
 
     }
@@ -426,10 +459,15 @@
     .in-touch {
         padding-top: 300px;
         padding-bottom: 150px;
+        overflow-x: hidden;
 
         .in-touch-text {
 
             margin-bottom: 100px;
+
+            @include bigPhoneMQ {
+                margin-top: 100px;
+            }
 
             h4 {
                 @include subHeading(2rem);
@@ -449,6 +487,10 @@
         display: flex;
         justify-content: flex-start;
         width: 100%;
+
+        @include bigPhoneMQ {
+            justify-content: space-between;
+        }
 
         li {
             padding-right: 50px;

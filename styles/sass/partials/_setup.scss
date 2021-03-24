@@ -18,12 +18,14 @@ body {
     position: relative;
     z-index: -1;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    // ^^^this solves animate on scroll horizontal scroll bug.
 }
 
 .wrapper {
     margin: 0 auto;
     max-width: 1200px;
-    width: 80%;
+    width: 90%;
 }
 
 .projects-wrapper {

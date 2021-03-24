@@ -40,3 +40,9 @@
         @content;
     }
 }
+
+@mixin bigPhoneMQ {
+    @media (max-width: 600px) {
+        @content;
+    }
+}

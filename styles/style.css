@@ -237,12 +237,13 @@ body {
   position: relative;
   z-index: -1;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
-  width: 80%;
+  width: 90%;
 }
 
 .projects-wrapper {
@@ -290,6 +291,7 @@ header video {
      object-fit: cover;
   -webkit-transition: ease-in-out 1s;
   transition: ease-in-out 1s;
+  opacity: .4;
 }
 
 header .arrow {
@@ -502,6 +504,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
   font-size: 2rem;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 700;
@@ -510,6 +513,7 @@ footer {
 @media (max-width: 1000px) {
   .about-me {
     width: 100%;
+    margin-bottom: 100px;
   }
 }
 
@@ -536,6 +540,13 @@ footer {
 
 .about-me .about-me-text {
   margin: 40px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 710px) {
+  .about-me .about-me-text {
+    margin: 10px 0 10px 10px;
+  }
 }
 
 .about-me .bio-text {
@@ -550,6 +561,12 @@ footer {
   padding-top: 60px;
   max-width: 35%;
   margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .about-me .photo {
+    max-width: 100%;
+  }
 }
 
 .about-me .photo img {
@@ -662,7 +679,17 @@ footer {
       justify-content: space-around;
 }
 
+@media (max-width: 710px) {
+  .skills .soft-skills-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .projects {
+  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -743,6 +770,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0;
   }
 }
 
@@ -855,6 +883,12 @@ footer {
   right: 195px;
 }
 
+@media (max-width: 600px) {
+  .projects .dejabrew .dejabrew-icons {
+    right: 60px;
+  }
+}
+
 .projects .dejabrew .fab, .projects .dejabrew .fas {
   color: #312a63;
   font-size: 3rem;
@@ -950,11 +984,19 @@ footer {
           clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0 100%);
   padding-bottom: 30px;
   position: relative;
+  overflow-x: hidden;
 }
 
 .contact .cube {
   position: absolute;
   left: 65%;
+}
+
+@media (max-width: 710px) {
+  .contact .cube {
+    left: 80%;
+    bottom: 90%;
+  }
 }
 
 .contact h3 {
@@ -975,7 +1017,7 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100px;
-  width: 700px;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -989,6 +1031,18 @@ footer {
   margin-bottom: 50px;
 }
 
+@media (max-width: 600px) {
+  .contact form div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .contact form div input[type="text"], .contact form div input[type="email"] {
   width: 245px;
   background-color: transparent;
@@ -997,6 +1051,12 @@ footer {
   border-bottom: 2px solid #ffff;
   padding: 7px;
   color: #ffff;
+}
+
+@media (max-width: 600px) {
+  .contact form div input[type="text"], .contact form div input[type="email"] {
+    width: 100%;
+  }
 }
 
 .contact form div input[type="text"]::-webkit-input-placeholder, .contact form div input[type="email"]::-webkit-input-placeholder, .contact form div textarea::-webkit-input-placeholder {
@@ -1027,6 +1087,12 @@ footer {
   padding: 7px;
 }
 
+@media (max-width: 600px) {
+  .contact form textarea {
+    width: 100%;
+  }
+}
+
 .contact form button {
   width: 200px;
   margin-top: 50px;
@@ -1054,13 +1120,26 @@ footer {
   top: 2px;
 }
 
+@media (max-width: 600px) {
+  .contact form button {
+    width: 100%;
+  }
+}
+
 .contact .in-touch {
   padding-top: 300px;
   padding-bottom: 150px;
+  overflow-x: hidden;
 }
 
 .contact .in-touch .in-touch-text {
   margin-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+  .contact .in-touch .in-touch-text {
+    margin-top: 100px;
+  }
 }
 
 .contact .in-touch .in-touch-text h4 {
@@ -1087,6 +1166,14 @@ footer {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
+}
+
+@media (max-width: 600px) {
+  .contact ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .contact ul li {
@@ -1126,6 +1213,12 @@ footer {
   position: relative;
   bottom: 40%;
   left: 10%;
+}
+
+@media (max-width: 1000px) {
+  .svg-top-right {
+    display: none;
+  }
 }
 
 @-webkit-keyframes Spin {
@@ -1173,4 +1266,10 @@ footer {
           filter: drop-shadow(6px 2px 1px #F65E8D);
   position: relative;
   top: 200px;
+}
+
+@media (max-width: 600px) {
+  .cube {
+    display: none;
+  }
 }

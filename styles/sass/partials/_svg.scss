@@ -4,6 +4,10 @@
     bottom: 40%;
     left: 10%;
 
+    @include tabletMQ {
+        display: none;
+    }
+
     @keyframes Spin {
         from {
             transform: rotate(0deg);
@@ -20,7 +24,7 @@
         filter: drop-shadow( 10px 10px 1px rgba(0, 0, 0, .7));
         animation: Spin infinite 100s linear;
     }
-
+    
 }
 
 .skills-svg {
@@ -35,4 +39,8 @@
     filter: drop-shadow( 6px 2px 1px $pink);
     position: relative;
     top: 200px;
+    
+    @include bigPhoneMQ {
+        display: none;
+    }
 }
