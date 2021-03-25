@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
+// MAIN MIXIN FUNCTIONS
+
 @mixin heading($sizeValue) {
     font-size: $sizeValue;
     font-family: 'Helvetica Nue', sans-serif;
@@ -26,27 +28,31 @@
     font-weight: 400;
 }
 
+// MEDIA QUERIES
 
-// Media Queries
 
+// tablets and above
 @mixin tabletMQ {
     @media (max-width: 1000px) {
         @content;
     }
 }
 
+// tablets
 @mixin smallTabletMQ {
     @media (max-width: 710px) {
         @content;
     }
 }
 
+// larger phones and smaller tablets
 @mixin bigPhoneMQ {
     @media (max-width: 600px) {
         @content;
     }
 }
 
+// phones down to 320px
 @mixin smallPhoneMQ {
     @media (max-width: 400px) {
         @content;

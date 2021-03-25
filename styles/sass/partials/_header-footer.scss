@@ -11,7 +11,6 @@ header {
     position: relative;
     z-index: -100;
 
-
     video {
         position: absolute;
         right: 0;
@@ -68,15 +67,15 @@ header {
         }
     }
 
-    // down arrow borrowed from: https://codepen.io/raf187/pen/BvgGRQ
+    // ^^^down arrow influenced by: https://codepen.io/raf187/pen/BvgGRQ
 
     .header-text {
         margin-left: 200px;
         margin-top: -230px;
         display: flex;
         flex-direction: column;
-        height: 100vh;
         justify-content: center;
+        height: 100vh;
         width: 100%;
 
         @include smallTabletMQ {
@@ -104,6 +103,8 @@ header {
         }
     }
 
+    // accessible skip link - tabbing
+
     .skip-link { 
         position: absolute; 
         left: -1000px; 
@@ -120,7 +121,6 @@ header {
     }
 
 }
-
 
 aside {
     position: absolute;
@@ -142,11 +142,7 @@ aside {
         color: #5145a7;
         font-size: 1.5rem;
         transition: all .3s ease-in-out;
-        @include smallPhoneMQ {
-            
-        }
     }
-    
     
     nav {
         @include nav(1.5rem);
@@ -175,30 +171,28 @@ aside {
                 opacity: .9;
             }
         }
+    
+        li {
+            transition: all ease-in-out .2s;
         
-            li {
-                    transition: all ease-in-out .2s;
-            
             a {
-                    @include nav(1.3rem);
-                    text-decoration: none;
-                    padding: 5px;
-                    @include smallPhoneMQ {
-                        @include nav(1rem);
-                    }
-            }
-
-        
-            }
-        
-            li:hover, li:focus {
-                    transform: scale(1.08);
-                    cursor: pointer;
+                @include nav(1.3rem);
+                text-decoration: none;
+                padding: 5px;
+                @include smallPhoneMQ {
+                    @include nav(1rem);
                 }
+            }
+    
+        }
+    
+        li:hover, li:focus {
+                transform: scale(1.08);
+                cursor: pointer;
+        }
     }
                         
 }
-
 
 footer {
     position: relative;

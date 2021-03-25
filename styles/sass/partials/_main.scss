@@ -3,13 +3,12 @@
     margin: 0 auto;
     max-width: 1000px;
     width: 80%;
-
     @include tabletMQ {
         width: 90%;
     }
 }
 
-// ABOUT ME
+// ABOUT ME SECTION
 
 .about-me {
     height: 100vh;
@@ -27,7 +26,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         @include smallTabletMQ {
             flex-direction: column;
             align-items: flex-start;
@@ -36,10 +34,10 @@
 
     .about-me-text {
         margin: 40px;
+        overflow-x: hidden;
         @include smallTabletMQ {
             margin: 10px 0 10px 10px;
         }
-        overflow-x: hidden;
     }
 
     .bio-text {
@@ -88,7 +86,7 @@
     }
 }
 
-// SKILLS
+// SKILLS SECTION
 
 .skills {
     background-color: $lightgrey;
@@ -182,7 +180,6 @@
             top: 20px;
         }
 
-    
         p {
             @include paragraph(1rem);
             width: 80%;
@@ -204,7 +201,7 @@
 
 }
 
-// PROJECTS
+// PROJECTS SECTION
 
 .projects {
     overflow-x: hidden;
@@ -247,7 +244,6 @@
         text-align: left;
     }
 
-
 // POPSIPOLL PROJECT
 
     .popsipoll {
@@ -255,7 +251,6 @@
         justify-content: space-between;
         @include paragraph(1rem);
         margin: 10px 0;
-
         @include tabletMQ {
             flex-direction: column;
             margin: 0;
@@ -281,7 +276,6 @@
             text-align: left;
             position: relative;
             right: 180px;
-
             @include tabletMQ {
                 right: 25%;
             }
@@ -334,7 +328,6 @@
             justify-content: space-around;
             position: relative;
             right: 200px;
-
             @include bigPhoneMQ {
                 right: 60px;
             }
@@ -368,7 +361,6 @@
             margin-bottom: 30px;
         }
 
-    
         .adjacent-image-container {
             width: 100%;
             img {
@@ -399,7 +391,6 @@
             }
         }
 
-    
         .fab, .fas {
             color: $purple;
             font-size: 3rem;
@@ -414,7 +405,7 @@
 
 }
 
-// Contact section
+// CONTACT SECTION
 
 .contact {
     background-color: $darkgrey;
@@ -450,7 +441,6 @@
 
         div {
             margin-bottom: 50px;
-
             @include bigPhoneMQ {
                 display: flex;
                 flex-direction: column;
@@ -464,7 +454,6 @@
                 border-bottom: 2px solid $white;
                 padding: 7px;
                 color: $white;
-
                 @include bigPhoneMQ {
                     width: 100%;
                 }
@@ -485,7 +474,6 @@
             border-bottom: 2px solid $white;
             color: $white;
             padding: 7px;
-
             @include bigPhoneMQ {
                 width: 100%;
             }
@@ -527,10 +515,8 @@
         padding-top: 300px;
         padding-bottom: 150px;
         
-        .in-touch-text {
-            
-            margin-bottom: 100px;
-            
+        .in-touch-text {    
+            margin-bottom: 100px;  
             @include bigPhoneMQ {
                 margin-top: 100px;
                 overflow-x: hidden;
@@ -554,7 +540,6 @@
         display: flex;
         justify-content: flex-start;
         width: 100%;
-
         @include bigPhoneMQ {
             justify-content: space-between;
         }
@@ -593,8 +578,3 @@
     }
 
 }
-
-
-
-
-

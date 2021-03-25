@@ -1,19 +1,14 @@
 const app = {};
 
-
 app.activeHighlight = () => {
 
-    let mainNavLinks = document.querySelectorAll("aside nav ul li a");
-    let mainSections = document.querySelectorAll("main section");
-
-    let lastId;
-    let cur = [];
+    const mainNavLinks = document.querySelectorAll("aside nav ul li a");
 
     window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
+        const fromTop = window.scrollY;
 
         mainNavLinks.forEach(link => {
-            let section = document.querySelector(link.hash);
+            const section = document.querySelector(link.hash);
 
             if (
                 section.offsetTop <= fromTop &&
