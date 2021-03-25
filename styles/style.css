@@ -300,6 +300,7 @@ header .arrow {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  font-size: 0;
 }
 
 header .arrow span {
@@ -1196,6 +1197,10 @@ footer {
   }
 }
 
+.contact form label {
+  font-size: 0;
+}
+
 .contact form textarea {
   resize: none;
   background-color: transparent;
@@ -1324,6 +1329,7 @@ footer {
   font-weight: 400;
   color: #ffff;
   text-decoration: none;
+  font-size: 0;
 }
 
 .contact .fas {

@@ -471,6 +471,10 @@
             }
         }
 
+        label {
+            font-size: 0;
+        }
+
         textarea {
             resize: none;
             background-color: transparent;
@@ -577,6 +581,7 @@
         @include paragraph(1.4rem);
         color: $white;
         text-decoration: none;
+        font-size: 0;
     }
 
     .fas {
