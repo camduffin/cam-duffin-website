@@ -562,6 +562,10 @@
         li {
             padding-right: 50px;
             margin: 0;
+
+            a {
+                font-size: 0;
+            }
     
             .fab {
                 color: $pink;
@@ -581,7 +585,6 @@
         @include paragraph(1.4rem);
         color: $white;
         text-decoration: none;
-        font-size: 0;
     }
 
     .fas {
