@@ -534,6 +534,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   color: #ffff;
   padding: 0;
   display: -webkit-box;
@@ -620,6 +621,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   width: 80%;
 }
 
@@ -784,6 +786,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   width: 80%;
 }
 
@@ -796,6 +799,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   padding-bottom: 20px;
   margin-top: 60px;
   width: 100%;
@@ -846,6 +850,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   text-decoration: none;
   color: #F65E8D;
   opacity: .8;
@@ -884,6 +889,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   margin: 10px 0;
 }
 
@@ -961,6 +967,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
 }
 
 @media (max-width: 1000px) {
@@ -1045,6 +1052,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   margin-bottom: 200px;
 }
 
@@ -1175,6 +1183,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .contact form div {
@@ -1293,6 +1302,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   color: #ffff;
   width: 60%;
 }
@@ -1343,6 +1353,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
+  line-height: 1.5rem;
   color: #ffff;
   text-decoration: none;
 }
