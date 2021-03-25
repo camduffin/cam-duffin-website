@@ -22,8 +22,15 @@ app.activeHighlight = () => {
     });
 }
 
+// clear form input after submission
+
+app.clearForm = () => {
+    document.getElementById('form').reset();
+}
+
 app.init = () => {
     app.activeHighlight();
+    app.clearForm();
 }
 
 app.init();
