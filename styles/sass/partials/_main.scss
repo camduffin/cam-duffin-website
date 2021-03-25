@@ -20,6 +20,7 @@
     @include tabletMQ {
         width: 100%;
         margin: 50px;
+        height: auto;
     }
 
     .about-me-flex {
@@ -247,11 +248,12 @@
 // POPSIPOLL PROJECT
 
     .popsipoll {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         @include paragraph(1rem);
         margin: 10px 0;
         @include tabletMQ {
+            display: flex;
             flex-direction: column;
             margin: 0;
         }
@@ -270,14 +272,15 @@
         }
 
         .popsipoll-icons {
-            display: flex;
-            width: 50%;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: .5fr .5fr .5fr;
+            width: 100%;
             text-align: left;
             position: relative;
-            right: 180px;
             @include tabletMQ {
-                right: 25%;
+                right: 0.1%;
+                width: 100%;
+                grid-template-columns: 1fr 1fr 2fr;
             }
         }
     
@@ -296,11 +299,12 @@
 // DEJA BREW PROJECT
 
     .dejabrew {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
         margin: 200px 0;
         @include paragraph(1rem);
         @include tabletMQ {
+            display: flex;
             flex-direction: column-reverse;
         }
 
@@ -322,14 +326,17 @@
         }
 
         .dejabrew-icons {
-            display: flex;
-            width: 30%;
-            flex-direction: row;
-            justify-content: space-around;
-            position: relative;
-            right: 200px;
+            display: grid;
+            grid-template-columns: .5fr .5fr .5fr;
+            width: 100%;
             @include bigPhoneMQ {
                 right: 60px;
+            }
+
+            @include tabletMQ {
+                right: 0.1%;
+                width: 100%;
+                grid-template-columns: 1fr 1fr 2fr;
             }
         }
     
@@ -349,16 +356,17 @@
 // ADJACENT PROJECT
 
     .adjacent {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         @include paragraph(1rem);
         margin-bottom: 200px;
         @include tabletMQ {
+            display: flex;
             flex-direction: column;
         }
 
         @include bigPhoneMQ {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .adjacent-image-container {
@@ -374,12 +382,15 @@
         }
 
         .adjacent-icons {
-            display: flex;
-            width: 80%;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-            right: 50px;
+            display: grid;
+            grid-template-columns: .25fr .55fr 1fr;
+            width: 100%;
+
+            @include tabletMQ {
+                right: 0.1%;
+                width: 100%;
+                grid-template-columns: 1fr 1fr 2fr;
+            }
         }
 
         .adjacent-icons li:nth-last-of-type(2) {
@@ -388,6 +399,10 @@
             .fa-js-square {
                 position: relative;
                 left: 10px;
+            }
+
+            @include tabletMQ {
+                margin-left: 0;
             }
         }
 

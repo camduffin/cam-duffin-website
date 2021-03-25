@@ -577,6 +577,7 @@ footer {
   .about-me {
     width: 100%;
     margin: 50px;
+    height: auto;
   }
 }
 
@@ -876,12 +877,10 @@ footer {
 }
 
 .projects .popsipoll {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   font-size: 1rem;
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
@@ -891,6 +890,9 @@ footer {
 
 @media (max-width: 1000px) {
   .projects .popsipoll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -921,22 +923,21 @@ footer {
 }
 
 .projects .popsipoll .popsipoll-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .5fr .5fr .5fr;
+      grid-template-columns: .5fr .5fr .5fr;
+  width: 100%;
   text-align: left;
   position: relative;
-  right: 180px;
 }
 
 @media (max-width: 1000px) {
   .projects .popsipoll .popsipoll-icons {
-    right: 25%;
+    right: 0.1%;
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 2fr;
   }
 }
 
@@ -952,11 +953,10 @@ footer {
 }
 
 .projects .dejabrew {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1.3fr;
   margin: 200px 0;
   font-size: 1rem;
   color: #686464;
@@ -966,6 +966,9 @@ footer {
 
 @media (max-width: 1000px) {
   .projects .dejabrew {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -1001,23 +1004,25 @@ footer {
 }
 
 .projects .dejabrew .dejabrew-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 30%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  position: relative;
-  right: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .5fr .5fr .5fr;
+      grid-template-columns: .5fr .5fr .5fr;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
   .projects .dejabrew .dejabrew-icons {
     right: 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .projects .dejabrew .dejabrew-icons {
+    right: 0.1%;
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 2fr;
   }
 }
 
@@ -1033,12 +1038,10 @@ footer {
 }
 
 .projects .adjacent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   font-size: 1rem;
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
@@ -1048,6 +1051,9 @@ footer {
 
 @media (max-width: 1000px) {
   .projects .adjacent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1057,7 +1063,7 @@ footer {
 
 @media (max-width: 600px) {
   .projects .adjacent {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1080,19 +1086,20 @@ footer {
 }
 
 .projects .adjacent .adjacent-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 80%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-  right: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .25fr .55fr 1fr;
+      grid-template-columns: .25fr .55fr 1fr;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .projects .adjacent .adjacent-icons {
+    right: 0.1%;
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 2fr;
+  }
 }
 
 .projects .adjacent .adjacent-icons li:nth-last-of-type(2) {
@@ -1102,6 +1109,12 @@ footer {
 .projects .adjacent .adjacent-icons li:nth-last-of-type(2) .fa-js-square {
   position: relative;
   left: 10px;
+}
+
+@media (max-width: 1000px) {
+  .projects .adjacent .adjacent-icons li:nth-last-of-type(2) {
+    margin-left: 0;
+  }
 }
 
 .projects .adjacent .fab, .projects .adjacent .fas {

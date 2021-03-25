@@ -95,12 +95,13 @@ header {
             color: $white;
             margin-bottom: 0;
         }
-    
+
         h2 {
             @include subHeading(1.3rem);
             color: $pink;
             margin-left: 10px;
         }
+
     }
 
     // accessible skip link - tabbing
