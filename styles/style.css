@@ -542,7 +542,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  opacity: .7;
   bottom: 0;
 }
 
