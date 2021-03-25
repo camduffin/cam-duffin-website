@@ -22,23 +22,11 @@ app.activeHighlight = () => {
     });
 }
 
-// clear form input after submission
-
-app.clearForm = () => {
-
-    const formElement = document.querySelector('form');
-
-    formElement.addEventListener('submit', function () {
-        // e.preventDefault();
-        document.querySelector('input').value = '';
-        document.querySelector('textarea').value = '';
-        document.getElementById('email').value = '';
-    })
-}
-
 app.init = () => {
     app.activeHighlight();
-    app.clearForm();
+
+    // clear form inputs on submission
+    const formElement = document.getElementById('form').reset();
 }
 
 app.init();
