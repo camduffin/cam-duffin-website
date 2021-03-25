@@ -315,6 +315,12 @@ header .arrow span {
           animation: animate 2.4s infinite;
 }
 
+@media (max-width: 600px) {
+  header .arrow span {
+    display: none;
+  }
+}
+
 header .arrow span:nth-child(2) {
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
@@ -377,6 +383,12 @@ header .header-text {
 @media (max-width: 710px) {
   header .header-text {
     margin-left: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  header .header-text {
+    width: 70%;
   }
 }
 
@@ -513,7 +525,7 @@ footer {
 @media (max-width: 1000px) {
   .about-me {
     width: 100%;
-    margin-bottom: 100px;
+    margin: 50px;
   }
 }
 
@@ -535,6 +547,9 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -625,19 +640,61 @@ footer {
 }
 
 .skills .skills-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20%;
+  -ms-grid-columns: 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20%;
 }
 
-.skills .skills-list li {
-  text-align: center;
-  padding-right: 20px;
+@media (max-width: 600px) {
+  .skills .skills-list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 40px;
+  }
+}
+
+.skills .skills-list .fa-html5, .skills .skills-list .fa-css3-alt {
+  position: relative;
+  left: 5px;
+}
+
+.skills .skills-list .javascript {
+  position: relative;
+  right: 20px;
+}
+
+.skills .skills-list .responsive-design {
+  position: relative;
+  padding: 0;
+  right: 40px;
+}
+
+.skills .skills-list .accessibility {
+  position: relative;
+  right: 20px;
+}
+
+.skills .skills-list .fa-universal-access {
+  position: relative;
+  left: 20px;
+}
+
+.skills .skills-list .fa-fire {
+  position: relative;
+  left: 10px;
+}
+
+.skills .skills-list .fa-bootstrap {
+  position: relative;
+  left: 10px;
+}
+
+.skills .skills-list .fa-mobile-alt {
+  position: relative;
+  left: 50px;
 }
 
 .skills .skills-list .fab, .skills .skills-list .fas {
@@ -648,12 +705,12 @@ footer {
 
 .skills .skills-list .fa-js-square {
   position: relative;
-  right: 7px;
+  left: 25px;
 }
 
-.skills .skills-list .fa-mobile-alt {
+.skills .skills-list .jquery {
   position: relative;
-  right: 10px;
+  top: 20px;
 }
 
 .skills .skills-list p {
@@ -665,9 +722,10 @@ footer {
 }
 
 .skills .soft-skills-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   font-size: 1rem;
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
@@ -675,12 +733,13 @@ footer {
   padding-bottom: 20px;
   margin-top: 60px;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 @media (max-width: 710px) {
   .skills .soft-skills-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -761,7 +820,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
-  margin: 100px 0;
+  margin: 10px 0;
 }
 
 @media (max-width: 1000px) {
@@ -832,6 +891,7 @@ footer {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin: 200px 0;
   font-size: 1rem;
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
@@ -844,6 +904,12 @@ footer {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects .dejabrew {
+    margin: 50px 0;
   }
 }
 
@@ -880,7 +946,7 @@ footer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
-  right: 195px;
+  right: 200px;
 }
 
 @media (max-width: 600px) {
@@ -911,7 +977,7 @@ footer {
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 400;
-  margin: 100px 0;
+  margin-bottom: 200px;
 }
 
 @media (max-width: 1000px) {
@@ -920,6 +986,12 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects .adjacent {
+    margin-bottom: 30px;
   }
 }
 
@@ -1129,7 +1201,6 @@ footer {
 .contact .in-touch {
   padding-top: 300px;
   padding-bottom: 150px;
-  overflow-x: hidden;
 }
 
 .contact .in-touch .in-touch-text {
@@ -1139,6 +1210,7 @@ footer {
 @media (max-width: 600px) {
   .contact .in-touch .in-touch-text {
     margin-top: 100px;
+    overflow-x: hidden;
   }
 }
 
