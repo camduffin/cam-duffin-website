@@ -10,6 +10,7 @@
 </head>
 <body>
     <header id="header">
+        <a href="#main-content" class="skip-link">Skip to content</a>
         <div class="header-text wrapper" data-aos="fade-right" data-aos-duration="1000">
             <h1>Cam Duffin</h1>
             <h2>Web Developer</h2>
@@ -25,7 +26,7 @@
     </header>
     <!-- STICKY NAV -->
     <aside>
-        <nav class="nav" data-aos="fade-left">
+        <nav class="main-menu">
             <ul>
                 <li>
                     <a href="#header">Intro</a>
@@ -46,15 +47,15 @@
         </nav>
     </aside>
     <!-- ABOUT ME -->
-    <main>
+    <main id="main-content">
         <section class="about-me wrapper" id="about-me">
             <div class="svg-top-right" aria-hidden="true">
                 <img class="blue-triangle" src="./assets/svg/triangle-seagreen.svg" aria-hidden="true">
             </div>
             <div class="inner-wrapper about-me-flex">
                 <div class="photo" data-aos="fade-right">
-                    <img src="./assets/headshot.jpg" alt="photo of cameron duffin">
-                    <a class="button" href="./assets/Cam Duffin Resume.pdf" target="_blank">Resume in PDF</a>
+                    <img src="./assets/misc/headshot.jpg" alt="photo of cameron duffin">
+                    <a class="button" href="./assets/misc/Cam Duffin Resume.pdf" target="_blank">Resume in PDF</a>
                 </div>
                 <div class="about-me-text" data-aos="fade-left">
                     <h3>Hello world!</h3>
@@ -258,7 +259,7 @@
     <img class="cube" src="./assets/svg/cube.svg" alt="a blue and pink glowing cube" data-aos="fade-left" data-aos-duration="700">
         <div class="inner-wrapper">
             <h3 data-aos="fade-right">Contact</h3>
-            <form action="https://formspree.io/f/meqvjgdr" method="POST" data-aos="fade-right" data-aos-duration="1000">
+            <form action="https://formspree.io/f/meqvjgdr" method="POST" data-aos="fade-right" data-aos-duration="1000" role="form">
                 <div>
                     <label for="name"></label>
                     <input type="text" id="name" placeholder="name" name="name">
@@ -268,7 +269,7 @@
                 </div>
                 <label for="message"></label>
                 <textarea name="message" id="message" placeholder="message"></textarea>
-                <button>Send Message</button>
+                <button type="submit">Send Message</button>
             </form>
             <div class="in-touch">
                 <div class="in-touch-text" data-aos="fade-left" data-aos-duration="700">

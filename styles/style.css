@@ -392,6 +392,12 @@ header .header-text {
   }
 }
 
+@media (max-width: 400px) {
+  header .header-text {
+    margin-right: 90px;
+  }
+}
+
 header .header-text h1 {
   font-size: 5rem;
   font-family: 'Helvetica Nue', sans-serif;
@@ -408,6 +414,21 @@ header .header-text h2 {
   margin-left: 10px;
 }
 
+header .skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  color: #ffff;
+  font-size: 1rem;
+}
+
+header .skip-link:focus {
+  left: 5px;
+  margin-top: 0;
+  padding: 3px 20px 0;
+}
+
 aside {
   position: absolute;
   right: 10%;
@@ -416,14 +437,14 @@ aside {
   margin-right: 5%;
   -webkit-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s;
-  background-color: white;
 }
 
 @media (max-width: 1000px) {
   aside {
-    position: fixed;
-    top: 0;
-    display: none;
+    position: -webkit-sticky;
+    position: sticky;
+    margin: 0 auto;
+    right: 0;
   }
 }
 
@@ -432,6 +453,8 @@ aside .current {
   right: 4px;
   color: #5145a7;
   font-size: 1.5rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 aside nav {
@@ -449,7 +472,25 @@ aside nav {
 
 @media (max-width: 1000px) {
   aside nav {
-    width: 100px;
+    width: 100%;
+    height: 6%;
+    border: none;
+    top: 0;
+    background-color: black;
+    opacity: .7;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  aside nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  aside nav:hover, aside nav:focus {
+    opacity: .9;
   }
 }
 
@@ -465,6 +506,15 @@ aside nav li a {
   font-weight: 400;
   text-decoration: none;
   padding: 5px;
+}
+
+@media (max-width: 400px) {
+  aside nav li a {
+    font-size: 1rem;
+    color: #F65E8D;
+    font-family: 'Helvetica Nue', sans-serif;
+    font-weight: 400;
+  }
 }
 
 aside nav li:hover, aside nav li:focus {
@@ -585,6 +635,7 @@ footer {
 }
 
 .about-me .photo img {
+  border-radius: 3px;
   min-width: 100px;
   max-width: 240px;
 }
@@ -602,6 +653,7 @@ footer {
   transition: all .2s ease-in-out;
   position: relative;
   opacity: .8;
+  border-radius: 3px;
 }
 
 .about-me .photo .button:hover, .about-me .photo .button:focus {
@@ -642,10 +694,11 @@ footer {
 .skills .skills-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 20% 20% 20% 20%;
-      grid-template-rows: 20% 20% 20% 20%;
-  -ms-grid-columns: 20% 20% 20% 20%;
-      grid-template-columns: 20% 20% 20% 20%;
+  -ms-grid-rows: 30% 30% 30% 30%;
+      grid-template-rows: 30% 30% 30% 30%;
+  -ms-grid-columns: 23% 23% 23% 23%;
+      grid-template-columns: 23% 23% 23% 23%;
+  padding: 20px;
 }
 
 @media (max-width: 600px) {
@@ -672,6 +725,12 @@ footer {
   right: 40px;
 }
 
+@media (max-width: 1000px) {
+  .skills .skills-list .responsive-design {
+    padding-left: 20px;
+  }
+}
+
 .skills .skills-list .accessibility {
   position: relative;
   right: 20px;
@@ -695,6 +754,12 @@ footer {
 .skills .skills-list .fa-mobile-alt {
   position: relative;
   left: 50px;
+}
+
+@media (max-width: 1000px) {
+  .skills .skills-list .fa-mobile-alt {
+    left: 30px;
+  }
 }
 
 .skills .skills-list .fab, .skills .skills-list .fas {
@@ -1131,22 +1196,6 @@ footer {
   }
 }
 
-.contact form div input[type="text"]::-webkit-input-placeholder, .contact form div input[type="email"]::-webkit-input-placeholder, .contact form div textarea::-webkit-input-placeholder {
-  color: #ffff;
-}
-
-.contact form div input[type="text"]:-ms-input-placeholder, .contact form div input[type="email"]:-ms-input-placeholder, .contact form div textarea:-ms-input-placeholder {
-  color: #ffff;
-}
-
-.contact form div input[type="text"]::-ms-input-placeholder, .contact form div input[type="email"]::-ms-input-placeholder, .contact form div textarea::-ms-input-placeholder {
-  color: #ffff;
-}
-
-.contact form div input[type="text"]::placeholder, .contact form div input[type="email"]::placeholder, .contact form div textarea::placeholder {
-  color: #ffff;
-}
-
 .contact form textarea {
   resize: none;
   background-color: transparent;
@@ -1178,6 +1227,7 @@ footer {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   position: relative;
+  border-radius: 3px;
 }
 
 .contact form button:hover, .contact form button:focus {

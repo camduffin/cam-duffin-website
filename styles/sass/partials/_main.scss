@@ -56,6 +56,7 @@
         }
 
         img {
+            border-radius: 3px;
             min-width: 100px;
             max-width: 240px;
         }
@@ -72,6 +73,7 @@
             transition: all .2s ease-in-out;
             position: relative;
             opacity: .8;
+            border-radius: 3px;
             &:hover,
             &:focus {
                 opacity: 1;
@@ -107,8 +109,9 @@
 
     .skills-list {
         display: grid;
-        grid-template-rows: 20% 20% 20% 20%;
-        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-rows: 30% 30% 30% 30%;
+        grid-template-columns: 23% 23% 23% 23%;
+        padding: 20px;
         @include bigPhoneMQ {
             grid-template-columns: 1fr 1fr 1fr;
             margin: 0 40px;
@@ -128,6 +131,11 @@
             position: relative;
             padding: 0;
             right: 40px;
+
+            @include tabletMQ {
+                padding-left: 20px;
+            }
+
         }
 
         .accessibility {
@@ -145,7 +153,6 @@
             left: 10px;
         }
 
-
         .fa-bootstrap {
             position: relative;
             left: 10px;
@@ -154,6 +161,9 @@
         .fa-mobile-alt {
             position: relative;
             left: 50px;
+            @include tabletMQ {
+                left: 30px;
+            }
         }
         
         .fab, .fas {
@@ -459,10 +469,6 @@
                     width: 100%;
                 }
             }
-
-            input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
-                color: $white;
-            }
         }
 
         textarea {
@@ -493,6 +499,7 @@
             opacity: .9;
             transition: all .2s ease-in-out;
             position: relative;
+            border-radius: 3px;
             &:hover,
             &:focus {
                 opacity: 1;
