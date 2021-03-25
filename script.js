@@ -28,8 +28,8 @@ app.clearForm = () => {
 
     const formElement = document.querySelector('form');
 
-    formElement.addEventListener('submit', function (e) {
-        e.preventDefault();
+    formElement.addEventListener('submit', function () {
+        // e.preventDefault();
         document.querySelector('input').value = '';
         document.querySelector('textarea').value = '';
         document.getElementById('email').value = '';
