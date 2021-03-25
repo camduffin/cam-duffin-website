@@ -25,7 +25,15 @@ app.activeHighlight = () => {
 // clear form input after submission
 
 app.clearForm = () => {
-    document.getElementById('form').reset();
+
+    const formElement = document.querySelector('form');
+
+    formElement.addEventListener('submit', function (e) {
+        e.preventDefault();
+        document.querySelector('input').value = '';
+        document.querySelector('textarea').value = '';
+        document.getElementById('email').value = '';
+    })
 }
 
 app.init = () => {
