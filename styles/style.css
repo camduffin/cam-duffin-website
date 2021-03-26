@@ -1095,8 +1095,8 @@ footer {
 .projects .adjacent .adjacent-icons {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: .25fr .55fr 1fr;
-      grid-template-columns: .25fr .55fr 1fr;
+  -ms-grid-columns: .45fr 1fr 1fr;
+      grid-template-columns: .45fr 1fr 1fr;
   width: 100%;
 }
 
@@ -1109,17 +1109,28 @@ footer {
   }
 }
 
-.projects .adjacent .adjacent-icons li:nth-last-of-type(2) {
-  margin-left: 40px;
+.projects .adjacent .adjacent-icons li:nth-of-type(2) {
+  margin-left: 50px;
 }
 
-.projects .adjacent .adjacent-icons li:nth-last-of-type(2) .fa-js-square {
+.projects .adjacent .adjacent-icons li:nth-of-type(2) .fa-js-square {
   position: relative;
-  left: 10px;
+  left: 30px;
 }
 
 @media (max-width: 1000px) {
-  .projects .adjacent .adjacent-icons li:nth-last-of-type(2) {
+  .projects .adjacent .adjacent-icons li:nth-of-type(2) {
+    margin-left: 0;
+  }
+}
+
+.projects .adjacent .adjacent-icons li:nth-of-type(3) .fa-code {
+  position: relative;
+  left: 40px;
+}
+
+@media (max-width: 1000px) {
+  .projects .adjacent .adjacent-icons li:nth-of-type(3) {
     margin-left: 0;
   }
 }
