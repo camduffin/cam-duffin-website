@@ -34,10 +34,10 @@ header {
 
     .arrow span {
         display: block;
-        width: 40px;
-        height: 40px;
-        border-bottom: 3px solid #06A8FF;
-        border-right: 3px solid #06A8FF;
+        width: 30px;
+        height: 30px;
+        border-bottom: 3px solid $blue;
+        border-right: 3px solid $blue;
         transform: rotate(45deg);
         margin: -10px;
         animation: animate 2.4s infinite;
@@ -140,7 +140,8 @@ aside {
     .current {
         position: relative;
         right: 4px;
-        color: #5145a7;
+        // color: #5145a7;
+        color: $blue;
         font-size: 1.5rem;
         transition: all .3s ease-in-out;
     }

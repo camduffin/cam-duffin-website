@@ -305,10 +305,10 @@ header .arrow {
 
 header .arrow span {
   display: block;
-  width: 40px;
-  height: 40px;
-  border-bottom: 3px solid #06A8FF;
-  border-right: 3px solid #06A8FF;
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid #1395a4;
+  border-right: 3px solid #1395a4;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin: -10px;
@@ -452,7 +452,7 @@ aside {
 aside .current {
   position: relative;
   right: 4px;
-  color: #5145a7;
+  color: #1395a4;
   font-size: 1.5rem;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
