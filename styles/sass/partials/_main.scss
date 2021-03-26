@@ -283,6 +283,18 @@
                 grid-template-columns: 1fr 1fr 2fr;
             }
         }
+
+        .popsipoll-icons li:nth-of-type(3) {
+
+            .fa-fire {
+                position: relative;
+                left: 10px;
+            }
+
+            @include tabletMQ {
+                margin-left: 0;
+            }
+        }
     
         .fab, .fas {
             color: $purple;

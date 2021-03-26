@@ -946,6 +946,17 @@ footer {
   }
 }
 
+.projects .popsipoll .popsipoll-icons li:nth-of-type(3) .fa-fire {
+  position: relative;
+  left: 10px;
+}
+
+@media (max-width: 1000px) {
+  .projects .popsipoll .popsipoll-icons li:nth-of-type(3) {
+    margin-left: 0;
+  }
+}
+
 .projects .popsipoll .fab, .projects .popsipoll .fas {
   color: #312a63;
   font-size: 3rem;
