@@ -790,6 +790,11 @@ footer {
   width: 80%;
 }
 
+.skills .skills-list li:nth-last-of-type(6) p {
+  position: relative;
+  right: 17px;
+}
+
 .skills .soft-skills-container {
   display: -ms-grid;
   display: grid;

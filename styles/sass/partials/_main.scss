@@ -187,6 +187,14 @@
         }
     }
 
+    .skills-list li:nth-last-of-type(6) {
+    
+        p {
+            position: relative;
+            right: 17px;
+        }
+    }
+
     .soft-skills-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
