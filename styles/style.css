@@ -749,11 +749,6 @@ footer {
   left: 10px;
 }
 
-.skills .skills-list .fa-bootstrap {
-  position: relative;
-  left: 10px;
-}
-
 .skills .skills-list .fa-mobile-alt {
   position: relative;
   left: 50px;
@@ -776,6 +771,11 @@ footer {
   left: 25px;
 }
 
+.skills .skills-list .fa-js {
+  position: relative;
+  left: 1px;
+}
+
 .skills .skills-list .jquery {
   position: relative;
   top: 20px;
@@ -793,6 +793,31 @@ footer {
 .skills .skills-list li:nth-last-of-type(6) p {
   position: relative;
   right: 17px;
+}
+
+.skills .skills-list li:nth-of-type(7) p {
+  position: relative;
+  right: 15px;
+}
+
+.skills .skills-list li:nth-of-type(9) p {
+  position: relative;
+  right: 10px;
+}
+
+.skills .skills-list li:nth-of-type(13) p {
+  position: relative;
+  right: 14px;
+}
+
+.skills .skills-list li:nth-of-type(14) p {
+  position: relative;
+  left: 4px;
+}
+
+.skills .skills-list li:nth-of-type(16) p {
+  position: relative;
+  right: 44px;
 }
 
 .skills .soft-skills-container {
@@ -841,7 +866,8 @@ footer {
   font-size: 3rem;
   font-family: 'Helvetica Nue', sans-serif;
   font-weight: 700;
-  padding-top: 100px;
+  padding-top: 50px;
+  position: relative;
 }
 
 .projects h4 {
@@ -880,9 +906,200 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: left;
+}
+
+.projects .emerge {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1.3fr;
+  margin: 100px 0;
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .projects .emerge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects .emerge {
+    margin: 50px 0;
+  }
+}
+
+.projects .emerge .dejabrew-image-container {
+  width: 100%;
+}
+
+.projects .emerge .dejabrew-image-container img {
+  width: 100%;
+}
+
+.projects .emerge .dejabrew-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects .emerge .dejabrew-icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .5fr .5fr .5fr;
+      grid-template-columns: .5fr .5fr .5fr;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .projects .emerge .dejabrew-icons {
+    right: 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .projects .emerge .dejabrew-icons {
+    right: 0.1%;
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+
+.projects .emerge .fab, .projects .emerge .fas {
+  color: #312a63;
+  font-size: 3rem;
+  padding-top: 26px;
+}
+
+.projects .emerge .fa-js {
+  position: relative;
+  left: 20px;
+}
+
+.projects .emerge p {
+  margin-right: 0;
+  width: 80%;
+}
+
+.projects .our-day {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  font-size: 1rem;
+  color: #686464;
+  font-family: 'Helvetica Nue', sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 10px 0;
+}
+
+@media (max-width: 1000px) {
+  .projects .our-day {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+}
+
+.projects .our-day .popsipoll-image-container {
+  width: 100%;
+}
+
+.projects .our-day .popsipoll-image-container img {
+  width: 100%;
+}
+
+.projects .our-day .popsipoll-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects .our-day .popsipoll-icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .5fr .5fr .5fr;
+      grid-template-columns: .5fr .5fr .5fr;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  .projects .our-day .popsipoll-icons {
+    right: 0.1%;
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+
+.projects .our-day .popsipoll-icons li:nth-of-type(2) .fa-react {
+  position: relative;
+  left: 8px;
+}
+
+@media (max-width: 1000px) {
+  .projects .our-day .popsipoll-icons li:nth-of-type(2) {
+    margin-left: 0;
+  }
+}
+
+.projects .our-day .popsipoll-icons li:nth-of-type(3) .fa-aws {
+  position: relative;
+  left: 10px;
+}
+
+@media (max-width: 1000px) {
+  .projects .our-day .popsipoll-icons li:nth-of-type(3) {
+    margin-left: 0;
+  }
+}
+
+.projects .our-day .fab, .projects .our-day .fas {
+  color: #312a63;
+  font-size: 3rem;
+  padding-top: 26px;
+}
+
+.projects .our-day p {
+  width: 80%;
+  margin-left: 0;
 }
 
 .projects .popsipoll {
@@ -978,7 +1195,7 @@ footer {
   display: grid;
   -ms-grid-columns: 1fr 1.3fr;
       grid-template-columns: 1fr 1.3fr;
-  margin: 200px 0;
+  margin: 100px 0;
   font-size: 1rem;
   color: #686464;
   font-family: 'Helvetica Nue', sans-serif;
@@ -1045,6 +1262,17 @@ footer {
     width: 100%;
     -ms-grid-columns: 1fr 1fr 2fr;
         grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+
+.projects .dejabrew .dejabrew-icons li:nth-of-type(3) .fa-aws {
+  position: relative;
+  left: 10px;
+}
+
+@media (max-width: 1000px) {
+  .projects .dejabrew .dejabrew-icons li:nth-of-type(3) {
+    margin-left: 0;
   }
 }
 

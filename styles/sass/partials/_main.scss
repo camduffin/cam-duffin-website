@@ -152,11 +152,6 @@
             left: 10px;
         }
 
-        .fa-bootstrap {
-            position: relative;
-            left: 10px;
-        }
-
         .fa-mobile-alt {
             position: relative;
             left: 50px;
@@ -176,6 +171,11 @@
             left: 25px;
         }
 
+        .fa-js {
+            position: relative;
+            left: 1px;
+        }
+
         .jquery {
             position: relative;
             top: 20px;
@@ -185,6 +185,7 @@
             @include paragraph(1rem);
             width: 80%;
         }
+        
     }
 
     .skills-list li:nth-last-of-type(6) {
@@ -194,6 +195,47 @@
             right: 17px;
         }
     }
+
+    .skills-list li:nth-of-type(7) {
+    
+        p {
+            position: relative;
+            right: 15px;
+        }
+    }
+
+    .skills-list li:nth-of-type(9) {
+    
+        p {
+            position: relative;
+            right: 10px;
+        }
+    }
+
+    .skills-list li:nth-of-type(13) {
+
+        p {
+            position: relative;
+            right: 14px;
+        }
+    }
+
+    .skills-list li:nth-of-type(14) {
+
+        p {
+            position: relative;
+            left: 4px;
+        }
+    }
+
+    .skills-list li:nth-of-type(16) {
+
+        p {
+            position: relative;
+            right: 44px;
+        }
+    }
+
 
     .soft-skills-container {
         display: grid;
@@ -221,7 +263,8 @@
     
     h3 {
         @include heading(3rem);
-        padding-top: 100px;
+        padding-top: 50px;
+        position: relative;
     }
     
     h4 {
@@ -249,9 +292,147 @@
     ul {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         text-align: left;
     }
+
+// Emerge Music Hub
+
+.emerge {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    margin: 100px 0;
+    @include paragraph(1rem);
+    @include tabletMQ {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    @include bigPhoneMQ {
+        margin: 50px 0;
+    }
+
+    .dejabrew-image-container {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .dejabrew-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dejabrew-icons {
+        display: grid;
+        grid-template-columns: .5fr .5fr .5fr;
+        width: 100%;
+        @include bigPhoneMQ {
+            right: 60px;
+        }
+
+        @include tabletMQ {
+            right: 0.1%;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 2fr;
+        }
+    }
+
+
+    .fab, .fas {
+        color: $purple;
+        font-size: 3rem;
+        padding-top: 26px;
+    }
+
+    .fa-js {
+        position: relative;
+        left: 20px;
+    }
+
+    p {
+        margin-right: 0;
+        width: 80%;
+    }
+}
+
+// Our Day
+
+    .our-day {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include paragraph(1rem);
+        margin: 10px 0;
+        @include tabletMQ {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .popsipoll-image-container {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+
+        .popsipoll-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .popsipoll-icons {
+            display: grid;
+            grid-template-columns: .5fr .5fr .5fr;
+            width: 100%;
+            text-align: left;
+            position: relative;
+            @include tabletMQ {
+                right: 0.1%;
+                width: 100%;
+                grid-template-columns: 1fr 1fr 2fr;
+            }
+        }
+
+        .popsipoll-icons li:nth-of-type(2) {
+
+            .fa-react {
+                position: relative;
+                left: 8px;
+            }
+
+            @include tabletMQ {
+                margin-left: 0;
+            }
+        }
+
+        .popsipoll-icons li:nth-of-type(3) {
+
+            .fa-aws {
+                position: relative;
+                left: 10px;
+            }
+
+            @include tabletMQ {
+                margin-left: 0;
+            }
+        }
+    
+        .fab, .fas {
+            color: $purple;
+            font-size: 3rem;
+            padding-top: 26px;
+        }
+    
+        p {
+            width: 80%;
+            margin-left: 0;
+        }
+    }
+
 
 // POPSIPOLL PROJECT
 
@@ -316,12 +497,13 @@
         }
     }
 
+
 // DEJA BREW PROJECT
 
     .dejabrew {
         display: grid;
         grid-template-columns: 1fr 1.3fr;
-        margin: 200px 0;
+        margin: 100px 0;
         @include paragraph(1rem);
         @include tabletMQ {
             display: flex;
@@ -357,6 +539,18 @@
                 right: 0.1%;
                 width: 100%;
                 grid-template-columns: 1fr 1fr 2fr;
+            }
+        }
+
+        .dejabrew-icons li:nth-of-type(3) {
+
+            .fa-aws {
+                position: relative;
+                left: 10px;
+            }
+
+            @include tabletMQ {
+                margin-left: 0;
             }
         }
     
